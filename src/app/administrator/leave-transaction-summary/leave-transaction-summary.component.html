@@ -1,0 +1,53 @@
+<h2 style="background-color: rgb(105, 105, 245);color: white; width: 150%;">Leave Transaction Summary</h2>
+<div class="row">
+    <div class="col-md-2">
+        <label class="h6">Year:</label>
+        <select class=" btn btn-outline-info">
+            <option >2021</option>
+        </select>
+    </div>
+  
+    <div class="col-md-4">
+        <label class="h6">Month:</label>
+    <select [(ngModel)]="selectedValue" name="months"   class=" btn btn-outline-info">
+        
+      <option *ngFor="let month of months" [value]="month.value">
+        {{month.viewValue}}
+      </option>
+    </select>
+
+    </div>
+    <div class="col-md-4">
+        
+        <select class=" btn btn-outline-info">
+            <option >Export (Reportlayout)</option>
+            <option >Export (Tabularlayout)</option>
+        </select>
+    </div>
+</div>
+<br>
+<!--Tables goes here-->
+
+<table class="table" style="width: 150%;">
+   
+    <thead>
+      <tr>
+        <th scope="col">ID <i class="fa fa-caret-down" aria-hidden="true"></i></th>
+        <th scope="col">Name <i class="fa fa-arrow-up" aria-hidden="true"></i></th>
+        <th scope="col">AppliedAt<i class="fa fa-caret-down" aria-hidden="true"></i></th>
+        <th scope="col">LeaveType<i class="fa fa-arrow-up" aria-hidden="true"></i></th>
+        <th scope="col">From<i class="fa fa-arrow-up" aria-hidden="true"></i></th>
+        <th scope="col">To <i class="fa fa-caret-down" aria-hidden="true"></i></th>
+        <th scope="col">For<i class="fa fa-arrow-up" aria-hidden="true"></i></th>
+        <th scope="col">Status<i class="fa fa-arrow-up" aria-hidden="true"></i></th>
+        <th scope="col">Reason<i class="fa fa-arrow-up" aria-hidden="true"></i></th>
+        <th scope="col">Remark<i class="fa fa-arrow-up" aria-hidden="true"></i></th>
+        <th scope="col">Department<i class="fa fa-arrow-up" aria-hidden="true"></i></th>
+        <th scope="col">Branch<i class="fa fa-arrow-up" aria-hidden="true"></i></th>
+      </tr>
+    </thead>
+    <tbody>
+    
+    </tbody>
+  </table>
+

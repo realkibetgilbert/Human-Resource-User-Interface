@@ -1,0 +1,73 @@
+<!--This is the header-->
+<h2 style="background-color: rgb(107, 107, 255); color: white; width: 100%">
+  Employee::Query
+</h2>
+<!--This is the buttons on top-->
+<div class="row">
+  <div class="col-md-2"></div>
+  <div class="col-md-4">
+    <button type="button" class="btn btn-outline-dark">View</button>
+  </div>
+
+  <div class="col-md-4">
+    <button
+      [routerLink]="['/administrator/employee/management/new']"
+      routerLinkActive="router-link-active"
+      type="button"
+      class="btn btn-outline-dark"
+    >
+      New
+    </button>
+  </div>
+</div>
+<br />
+<!--Tables goes here-->
+
+<table class="table table-responsive">
+  <thead>
+    <tr>
+      <th scope="col">National Id</th>
+      <th scope="col">Name</th>
+      <th scope="col">Gender</th>
+      <th scope="col">Position</th>
+      <th scope="col">Department</th>
+      <th scope="col">DateJoined</th>
+      <th scope="col">Status</th>
+      <th scope="col">Modified</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let items of newemployeelist">
+      <td>{{ items.Id }}</td>
+      <td>{{ items.Name }}</td>
+      <td>{{ items.Gender }}</td>
+      <td>{{ items.Position }}</td>
+      <td>{{ items.Department }}</td>
+      <td>{{ items.DateJoined }}</td>
+      <td>{{ items.Status }}</td>
+      <td>{{ items.Modified }}</td>
+
+      <td style="display: flex; justify-content: space-evenly">
+        <button
+          type="button"
+          class="btn btn-success"
+          (click)="openForEdit(items.NewEmployeeId)"
+        >
+          Edit
+        </button>
+
+        <button
+          type="button"
+          class="btn btn-danger"
+          (click)="DeleteNewEmployee(items.NewEmployeeId)"
+        >
+          Delete
+        </button>
+      </td>
+    </tr>
+    <tr *ngIf="!newemployeelist || newemployeelist.length == 0">
+      <td colspan="10">No Employees To Display</td>
+    </tr>
+  </tbody>
+</table>

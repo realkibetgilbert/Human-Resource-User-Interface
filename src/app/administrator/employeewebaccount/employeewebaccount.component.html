@@ -1,0 +1,35 @@
+<h2 style="background-color: rgb(105, 105, 245);color: white; width: 100%;">WebAccount::Query</h2>
+<div class="row">
+  
+    <div class="col-md-4">
+        <label class="h6">WebAccounts:</label>
+    <select [(ngModel)]="selectedValue" name="accounts"   class=" btn btn-outline-info">
+        
+      <option *ngFor="let account of accounts" [value]="account.value">
+        {{account.viewValue}}
+      </option>
+    </select>
+
+    </div>
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <button type="button" [routerLink]="['/administrator/employee/webAccount/new']" routerLinkActive="router-link-active"  class="btn btn-outline-dark btn-lg" style="width: 25%;">New</button>
+    </div>
+
+   
+</div>
+<br>
+<!--Tables goes here-->
+
+<table class="table">
+   
+    <thead>
+      <tr>
+        <th scope="col">HRRole</th>
+        <th scope="col">Enabled </th>
+      </tr>
+    </thead>
+    <tbody>
+    
+    </tbody>
+  </table>

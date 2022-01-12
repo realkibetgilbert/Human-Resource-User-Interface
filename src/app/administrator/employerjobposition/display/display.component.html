@@ -1,0 +1,72 @@
+<h2 style="background-color: #4287f5; color: white">Job : :Position</h2>
+<!--This is the form for job position-->
+
+<div class="card">
+  <div class="cardbody">
+    <div class="container">
+      <br />
+      <div class="col-md-12">
+        <label>CODE</label>
+        <input
+          type="text"
+          [(ngModel)]="Code"
+          class="form-control"
+          #code
+          required
+        />
+      </div>
+      <div class="col-md-12">
+        <label>TITLE</label>
+        <input
+          type="text"
+          [(ngModel)]="Title"
+          class="form-control"
+          #title
+          required
+        />
+      </div>
+      <div class="col-md-1">
+        <label for="">ACTIVE</label>
+        <br />
+        <input type="checkbox" [(ngModel)]="Active" class="checkbox" #active />
+      </div>
+      <div class="col-md-12">
+        <label>RESPONSIBILITY</label>
+        <input
+          type="text"
+          [(ngModel)]="Responsibility"
+          class="form-control"
+          #responsibility
+          required
+        />
+      </div>
+      <br />
+
+      <div class="row">
+        <button
+          type="submit"
+          (click)="onSubmit(Code, Title, Active, Responsibility)"
+          class="btn btn-primary btn-sm"
+          style="margin-left: 3%"
+        >
+          <i class="fa fa-database" aria-hidden="true"></i> SAVE
+        </button>
+
+        <button
+          class="btn btn-primary btn-sm"
+          [routerLink]="['/administrator/employer/jobposition']"
+          routerLinkActive="router-link-active"
+          style="
+            margin-left: 50%;
+            background-color: #37474f;
+            border-color: #37474f;
+            color: #fff;
+          "
+        >
+          <i class="fa fa-arrow-circle-left" aria-hidden="true"></i> BACK
+        </button>
+      </div>
+      <br />
+    </div>
+  </div>
+</div>

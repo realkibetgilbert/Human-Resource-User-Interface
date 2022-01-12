@@ -1,0 +1,139 @@
+.sidenav-container {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  box-sizing: border-box;
+}
+mat-icon {
+  font-size: 35px;
+  margin-left: -10px;
+}
+
+.sidenav {
+  border-right: 1px solid rgba(0, 0, 0, 0.12);
+  width: 400px;
+  top: 50px;
+  position: fixed;
+  height: 98%;
+  left: 0;
+  background: #4287f5;
+  color: rgb(32, 24, 24);
+}
+
+.sidenav.text {
+  color: black;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 65px;
+  text-align: center;
+  background: #4287f5;
+  letter-spacing: 1px;
+}
+
+ul {
+  height: 100%;
+  width: 90%;
+  list-style: none;
+  background: #4287f5;
+  background-color: #4287f5;
+  margin-right: -20px;
+  top: 50px;
+}
+
+ul li {
+  background-color: #4287f5;
+  background: #4287f5;
+  margin-right: -20px;
+  margin-top: 5%;
+  color: black;
+  line-height: 30px;
+  margin-left: -25px;
+  cursor: pointer;
+}
+
+ul li a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-size: 22px;
+  padding-left: 20px;
+  font-weight: 500;
+  display: block;
+  width: 100%;
+  border-left: 3px solid transparent;
+  margin-left: -5px;
+}
+
+ul li a.hoover {
+  color: red;
+  background: #1e1e1e;
+  border-left-color: red;
+}
+ul ul {
+  position: static;
+  display: none;
+}
+ul.employee-show.show1 {
+  display: block;
+  line-height: 2px;
+}
+ul.Leave-show.show2 {
+  display: block;
+  line-height: 2px;
+}
+ul.employer-show.show3 {
+  display: block;
+  line-height: 2px;
+}
+ul.Attendance-show.show4 {
+  display: block;
+  line-height: 2px;
+}
+ul.Team-show.show5 {
+  display: block;
+  line-height: 2px;
+}
+ul.Expense-show.show6 {
+  display: block;
+  line-height: 2px;
+}
+ul.Document-show.show7 {
+  display: block;
+  line-height: 2px;
+}
+
+ul.Payroll-show.show8 {
+  display: block;
+  line-height: 2px;
+}
+
+ul.Account-show.show9 {
+  display: block;
+  line-height: 2px;
+}
+
+ul ul li {
+  line-height: 40px;
+  border-bottom: none;
+}
+ul ul li a {
+  font-size: 18px;
+  color: white;
+  padding-left: 30px;
+  margin-left: 10%;
+  background-color: #4287f5;
+}
+ul li a i {
+  right: 5px;
+  top: 30%;
+  position: absolute;
+  transform: translateY(-50%);
+  font-size: 22px;
+  margin-top: 18px;
+}
+ul li a:hover i {
+  transition: transform 0.5s;
+
+  transform: translateY(-50%) rotate(-180deg, +180deg);
+}

@@ -1,0 +1,16 @@
+h2 {
+  background-color: rgb(105, 105, 245);
+  color: white;
+}
+.card {
+  margin-left: 3%;
+  margin-right: 3%;
+}
+input,
+select {
+  height: 55px;
+}
+
+label {
+  font-size: 20px;
+}

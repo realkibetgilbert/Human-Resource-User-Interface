@@ -1,0 +1,60 @@
+<h2 style="background-color: rgb(105, 105, 245);color: white; width: 100%;">EmployementTerms::Query</h2>
+<div class="row">
+  <div class="col-md-2"></div>
+  <div class="col-md-4">
+  <button type="button" class="btn btn-outline-dark">SelectEmployee</button>
+  </div>
+  
+  <div class="col-md-4">
+      <button  [routerLink]="['/administrator/employee/employementterms/new']" routerLinkActive="router-link-active"    type="button" class="btn btn-outline-dark">New</button>
+      </div>
+
+</div>
+
+
+
+<!--Table goes here-->
+
+
+<table class="table">
+   
+  <thead>
+    <tr>
+      
+      <th scope="col">JobType </th>
+      <th scope="col"> JobStatus</th>
+      <th scope="col">LeaveWorkFlow</th>
+      <th scope="col">WorkDay </th>
+      <th scope="col">Holiday</th>
+      <th scope="col">TermStart </th>
+      <th scope="col">TermEnd</th>
+      <th scope="col">Remark </th>
+      <th scope="col">Actions</th>
+
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let items of employmentlist">
+      <td>{{items.JobType}}</td>
+      <td>{{items.JobStatus}}</td>
+      <td>{{items.LeaveWorkFlow}}</td>
+      <td>{{items.WorkDay}}</td>
+      <td>{{items.Holiday}}</td>
+      <td>{{items.TermStart}}</td>
+      <td>{{items.TermEnd}}</td>
+      <td>{{items.Remark}}</td>
+      <td>
+
+        <button type="button" class="btn btn-success" (click)="openForEdit(items.EmploymentId)" > Edit </button>
+            
+          <button type="button" class="btn btn-danger" (click)="DeleteEmploymentTerms(items.EmploymentId)" >Delete</button>
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+
+
+
+

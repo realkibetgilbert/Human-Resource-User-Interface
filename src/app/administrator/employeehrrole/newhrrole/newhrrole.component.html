@@ -1,0 +1,42 @@
+<!--This is the header-->
+<h2 style="background-color: rgb(105, 105, 245);color: white; width: 100%;">HR Role::New</h2>
+<!--This are the inputs-->
+
+
+<div class="card" style="margin-top: 5%;margin-right: 2%;margin-left: 2%;">
+  <div class="card-body">
+
+    
+<div class="container">
+  
+  <div class="col-md-12">
+    <label >CODE</label>
+    <input type="text" class="form-control form-control-l" [(ngModel)]="Code" placeholder="Enter Code">
+    
+  </div>
+  <br>
+  <div class="col-md-12">
+    <label >DESCRIPTION</label>
+    <input type="text" class="form-control form-control-lg" [(ngModel)]="Description"  placeholder="Enter Description">
+
+
+  </div>
+  <br>
+  <div class="col-md-12">
+    <label>ACTIVE</label>
+    <input class="form-control form-control-lg" type="checkbox" [(ngModel)]="Active" style="width: 30px;height: 30px;" >
+
+  </div>
+  
+<br>
+<button type="submit" (click)="onSubmit(Code,Description,Active)" class="btn btn-primary btn-lg"> <span><i class="fa fa-database" aria-hidden="true"></i></span> Submit</button>
+
+</div>
+
+
+  </div>
+
+</div>
+
+
+

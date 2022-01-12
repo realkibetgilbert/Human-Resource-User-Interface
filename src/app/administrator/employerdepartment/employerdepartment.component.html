@@ -1,0 +1,72 @@
+<h2 style="background-color: #4287f5; color: white; width: 100%">
+  Department::Query
+</h2>
+
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-12">
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-2">
+        <button type="button" class="btn btn-outline-dark">View</button>
+      </div>
+      <div class="col-md-1"></div>
+      <div class="col-md-2"></div>
+      <div class="col-md-1"></div>
+      <div class="col-md-2"></div>
+      <div class="col-md-1"></div>
+      <div class="col-md-2">
+        <button
+          type="button"
+          class="btn btn-outline-dark"
+          [routerLink]="['/administrator/employer/department/new']"
+          routerLinkActive="router-link-active"
+        >
+          New
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br />
+<!--Table goes here-->
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Code</th>
+      <th scope="col">Name</th>
+      <th scope="col">Active</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      *ngFor="
+        let items of departmentlist
+          | paginate: { itemsPerPage: 5, currentPage: p }
+      "
+    >
+      <td>{{ items.Code }}</td>
+      <td>{{ items.Name }}</td>
+      <td>{{ items.Active }}</td>
+
+      <td style="display: flex; justify-content: space-evenly">
+        <button
+          class="btn btn-success"
+          (click)="openForEdit(items.DepartmentId)"
+        >
+          Edit</button
+        ><br />
+
+        <button
+          class="btn btn-danger"
+          (click)="DeleteEmployerDepartment(items.DepartmentId)"
+        >
+          Delete
+        </button>
+      </td>
+    </tr>
+  </tbody>
+  <pagination-controls (pageChange)="p = $event"> </pagination-controls>
+</table>

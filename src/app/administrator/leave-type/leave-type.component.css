@@ -1,0 +1,16 @@
+.table{
+  width: 100%;
+  border-collapse: separate;
+border-spacing: 0 15px;
+}
+th {
+  background-color: #4287f5;
+  color: white;
+}
+th,
+td {
+width: 200px;
+text-align: center;
+border: 1px solid whitesmoke;
+padding: 5px;
+}

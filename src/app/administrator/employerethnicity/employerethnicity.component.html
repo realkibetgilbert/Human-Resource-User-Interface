@@ -1,0 +1,67 @@
+<h2 style="background-color: #4287f5; color: white; width: 100%">
+  Ethnicity::Query
+</h2>
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-12">
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-2">
+        <button type="button" class="btn btn-outline-dark">View</button>
+      </div>
+      <div class="col-md-1"></div>
+      <div class="col-md-2"></div>
+      <div class="col-md-1"></div>
+      <div class="col-md-2"></div>
+      <div class="col-md-1"></div>
+      <div class="col-md-2">
+        <button
+          type="button"
+          class="btn btn-outline-dark"
+          [routerLink]="['/administrator/employer/ethnicity/new']"
+          routerLinkActive="router-link-active"
+        >
+          New
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<br />
+<!--Table goes here-->
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Description</th>
+      <th scope="col">Active</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      *ngFor="
+        let items of ethnicityList
+          | paginate: { itemsPerPage: 6, currentPage: p }
+      "
+    >
+      <td>{{ items.Description }}</td>
+      <td>{{ items.Active }}</td>
+      <td style="display: flex; justify-content: space-evenly">
+        <button
+          class="btn btn-success"
+          (click)="openForEdit(items.EthnicityId)"
+        >
+          Edit</button
+        ><br />
+
+        <button
+          class="btn btn-danger"
+          (click)="DeleteEmployerEthnicity(items.EthnicityId)"
+        >
+          Delete
+        </button>
+      </td>
+    </tr>
+  </tbody>
+  <pagination-controls (pageChange)="p = $event"> </pagination-controls>
+</table>

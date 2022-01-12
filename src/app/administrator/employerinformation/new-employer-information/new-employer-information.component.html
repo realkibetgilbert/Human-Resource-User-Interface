@@ -1,0 +1,230 @@
+<!--This is the header-->
+<h2 style="background-color: #4287f5; color: white; width: 100%">
+  Employer::Information
+</h2>
+<div class="card">
+  <div class="container">
+    <div class="form-group" style="margin-left: 25%; margin-top: 2%">
+      <img
+        *ngIf="show"
+        src="{{ imageUrl }}"
+        style="width: 250px; height: 250px"
+      />
+      <br />
+      <!--WE use interpolation for string concatination-->
+      <img
+        *ngIf="hide"
+        src="http://localhost:49986/image/{{ ImageName }}"
+        style="width: 250px; height: 250px"
+      />
+      <br />
+      <input
+        type="file"
+        [(ngModel)]="Image"
+        accept="/image*"
+        (change)="handleFileInput($event.target.files)"
+        *ngIf="show"
+      />
+      <br />
+      <br />
+      <!--<a
+        *ngIf="hide"
+        class="btn btn-primary"
+        (click)="showForUpdate()"
+        style="margin-left: 7%"
+      >
+        CHANGE PHOTO
+      </a>-->
+
+      <input
+        type="file"
+        (click)="showForUpdate()"
+        [(ngModel)]="Image"
+        accept="/image*"
+        (change)="handleFileInput($event.target.files)"
+        *ngIf="hide"
+      />
+    </div>
+
+    <div class="col-md-12">
+      <label for="Name">NAME</label>
+      <input type="text" [(ngModel)]="Name" class="form-control" />
+    </div>
+    <br />
+
+    <div class="col-md-12">
+      <label for="RegistrationNumber">REGISTRATION NUMBER</label>
+      <input
+        type="text"
+        [(ngModel)]="RegistrationNumber"
+        class="form-control"
+      />
+    </div>
+    <br />
+
+    <div class="col-md-12">
+      <label for="Industry">INDUSTRY</label>
+      <select [(ngModel)]="Industry" class="custom-select">
+        <option selected>Select Your industry</option>
+        <option *ngFor="let industry of industries">{{ industry }}</option>
+      </select>
+    </div>
+
+    <br />
+    <div class="col-md-12">
+      <label for="HomeCountry">HOMECOUNTRY</label>
+      <input type="text" [(ngModel)]="HomeCountry" class="form-control" />
+    </div>
+    <br />
+
+    <div class="col-md-12">
+      <label for="PortalUrl">PORTAL(URL)</label>
+      <input
+        type="url"
+        [(ngModel)]="PortalUrl"
+        class="form-control"
+        placeholder="e.g https://hr.my/go/portal/87455d986d0d4fad9dd6f644b8d23cad"
+      />
+    </div>
+    <br />
+
+    <div class="col-md-12">
+      <div class="class-col-md-12">
+        <h1 class="p-3 mb-2 bg-primary text-white">CONTACT</h1>
+      </div>
+    </div>
+    <br />
+
+    <div class="col-md-12">
+      <label for="Email">EMAIL</label>
+      <input
+        type="text"
+        [(ngModel)]="Email"
+        class="form-control"
+        placeholder="e.g info@micropointsystems.com"
+      />
+    </div>
+
+    <br />
+    <div class="col-md-12">
+      <label for="WebSite">WEBSITE</label>
+      <input
+        type="text"
+        [(ngModel)]="WebSite"
+        class="form-control"
+        placeholder="Start with http:// or https:// e.g https://www.micropointsystems.com/"
+      />
+    </div>
+    <br />
+
+    <div class="col-md-12">
+      <label for="Address1">ADDRESS1</label>
+      <input
+        type="text"
+        [(ngModel)]="Address1"
+        class="form-control"
+        placeholder=" e.g Mombasa Road Off Katani Road, P.O Box 7106-00200 Nairobi"
+      />
+    </div>
+
+    <br />
+    <div class="col-md-12">
+      <label for="Address2">ADDRESS2</label>
+      <input
+        type="text"
+        [(ngModel)]="Address2"
+        class="form-control"
+        placeholder="e.g REPEN COMPLEX,SECONDFLOOR"
+      />
+    </div>
+    <br />
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="class-form-group">
+            <label for="City">CITY</label>
+            <input type="text" [(ngModel)]="City" class="form-control" />
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <label for="PostalCode">POSTALCODE</label>
+          <input type="text" [(ngModel)]="PostalCode" class="form-control" />
+        </div>
+      </div>
+    </div>
+    <!---city and postal-->
+    <br />
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-6">
+          <label for="State">STATE</label>
+          <input type="text" [(ngModel)]="State" class="form-control" />
+        </div>
+        <div class="col-md-6">
+          <label for="Country">COUNTRY/REGION</label>
+          <select [(ngModel)]="Country" class="custom-select">
+            <option selected>Select your Country</option>
+            <option *ngFor="let country of countries">{{ country }}</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <br />
+
+    <div class="col-md-12">
+      <label for="Telephone">TELEPHONE</label>
+      <input type="text" [(ngModel)]="Telephone" class="form-control" />
+    </div>
+    <br />
+    <div class="col-md-12">
+      <label for="Fax">FAX</label>
+      <input type="text" [(ngModel)]="Fax" class="form-control" />
+    </div>
+    <br />
+    <div class="col-md-12">
+      <button
+        style="border-radius: 2rem"
+        class="btn btn-primary"
+        (click)="
+          OnSubmit(
+            ImageName,
+            Name,
+            RegistrationNumber,
+            Industry,
+            HomeCountry,
+            PortalUrl,
+            Email,
+            WebSite,
+            Address1,
+            Address2,
+            City,
+            PostalCode,
+            State,
+            Country,
+            Telephone,
+            Fax
+          )
+        "
+      >
+        <i class="fa fa-database" aria-hidden="true"></i> SAVE
+      </button>
+
+      <button
+        class="btn btn-primary"
+        [routerLink]="['/administrator/employer/information']"
+        routerLinkActive="router-link-active"
+        style="
+          margin-left: 50%;
+          border-radius: 2rem;
+          background-color: #37474f;
+          border-color: #37474f;
+          color: #fff;
+        "
+      >
+        <i class="fa fa-arrow-circle-left" aria-hidden="true"></i> BACK
+      </button>
+    </div>
+    <br />
+  </div>
+</div>

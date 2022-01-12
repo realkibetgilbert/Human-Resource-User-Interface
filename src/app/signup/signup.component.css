@@ -1,0 +1,43 @@
+.Body {
+  background-color: #e9ecef;
+}
+a {
+  border-radius: 15px;
+}
+
+.example-card {
+  max-width: 400px;
+  height: 100%;
+  max-width: 400px;
+  width: 95%;
+}
+
+.example-header-image {
+  background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
+  background-size: cover;
+}
+.center-content {
+  margin-top: 50px;
+  text-align: -webkit-center;
+}
+.example-form {
+  min-width: 200spx;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  margin-top: 10px;
+  width: 100%;
+}
+.mat-button {
+  margin-top: 10px;
+  width: 50%;
+  color: white;
+  height: 40px;
+  background-color: #3f51b5;
+}
+input {
+  font-size: large;
+  height: 35px;
+}

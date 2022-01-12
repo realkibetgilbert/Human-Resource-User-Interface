@@ -1,0 +1,58 @@
+<h2 style="background-color: rgb(105, 105, 245);color: white; width: 100%;">HR Role::Query</h2>
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-2">
+                <button type="button" class="btn btn-outline-secondary">View</button>
+
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-2">
+                <button type="button"  class="btn btn-outline-secondary" [routerLink]="['/administrator/employee/HRrole/new']" routerLinkActive="router-link-active"     >New</button>
+
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-2">
+                <button type="button" class="btn btn-outline-secondary">Edit</button>
+
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-2">
+                <button type="button" class="btn btn-outline-secondary">Delete</button>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<br>
+<!--Table goes here-->
+<table class="table">
+    
+    <thead>
+      <tr>
+        <th scope="col">Code </th>
+        <th scope="col"> Description </th>
+        <th scope="col">Active </th>
+        <th>Actions</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+
+        <tr *ngFor="let items of hrrolelist">
+            <td>{{items.Code}}</td>
+            <td>{{items.Description}}</td>
+            <td>{{items.Active}}</td>
+            <td style="display: flex;justify-content: space-evenly;">
+                <button type="button" class="btn btn-success" (click)="openForEdit(items.HrRoleId)" > Edit </button>
+                <button type="button" class="btn btn-danger" (click)="DeleteHrRole(items.HrRoleId)" style="margin-right: 0%;" >Delete</button>
+              </td>
+
+        </tr>
+    
+    </tbody>
+  </table>

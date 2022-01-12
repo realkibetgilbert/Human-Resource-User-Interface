@@ -1,0 +1,32 @@
+.card{
+  margin-top: 100px;
+  margin-left: 400px;
+  height: 300px;
+  width: 650px;
+  position:relative;
+}
+p{
+  font-size: large;
+}
+i{
+  font-size: 40px;
+}
+
+.center-content{
+  margin-top: 50px;
+    text-align: -webkit-center;
+}
+.example-card {
+  max-width: 400px;
+  height: 620px;
+  max-width: 400px;
+  width: 75%;
+  margin: 5px auto;
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    width: 100%;
+    background-color: blue;
+  }
+}

@@ -1,0 +1,51 @@
+<!--this is the header-->
+<h2 style="background-color: rgb(105, 105, 245);color: white;width: 120%;">CustomApprover::Query</h2>
+<!--This are the buttons-->
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-2">
+        <button type="button" class="btn btn-outline-dark">View</button>
+
+    </div>
+    <div class="col-md-2"></div>
+    <div class="col-md-2">
+        <button [routerLink]="['/administrator/expenseclaim/customApprover/new']" routerLinkActive="router-link-active"  type="button" class="btn btn-outline-dark">New</button>
+
+    </div>
+    <div class="col-md-2">
+        <button type="button" class="btn btn-outline-dark">Edit</button>
+
+    </div>
+    <div class="col-md-1"></div>
+    <div class="col-md-2">
+        <button type="button" class="btn btn-outline-dark">Delete</button>
+
+    </div>
+
+</div>
+
+
+<!--Table goes here-->
+<br>
+
+<table class="table">
+    
+    <thead>
+      <tr>
+        <th scope="col">Role<i class="fa fa-caret-down" aria-hidden="true"></i></th>
+        <th scope="col">Description<i class="fa fa-caret-down" aria-hidden="true"></i></th>
+        <th scope="col">LeaveWorkflow<i class="fa fa-caret-down" aria-hidden="true"></i></th>
+        <th scope="col">DocumentWorkflow<i class="fa fa-caret-down" aria-hidden="true"></i></th>
+        <th scope="col">ClaimWorkflow<i class="fa fa-caret-down" aria-hidden="true"></i></th>
+        <th scope="col">Modified<i class="fa fa-caret-down" aria-hidden="true"></i></th>
+        
+        
+      </tr>
+    </thead>
+    <tbody>
+        
+    </tbody>
+  </table>
+
+
+

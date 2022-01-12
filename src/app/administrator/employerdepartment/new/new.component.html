@@ -1,0 +1,62 @@
+<!--This is the header-->
+<h2 style="background-color: #4287f5; color: white; width: 100%">
+  Employer::Department
+</h2>
+<div class="card card-body">
+  <div class="col-md-12">
+    <label for="">CODE</label>
+    <input
+      type="text"
+      [(ngModel)]="Code"
+      class="form-control"
+      placeholder="Enter Code"
+      required
+    />
+  </div>
+  <br />
+  <div class="col-md-12">
+    <label for="">NAME</label>
+    <input
+      type="text"
+      [(ngModel)]="Name"
+      class="form-control"
+      placeholder="Enter Name"
+      required
+    />
+  </div>
+  <br />
+  <div class="col-md-12">
+    <label for="">ACTIVE</label>
+    <input
+      type="checkbox"
+      [(ngModel)]="Active"
+      style="width: 22px; height: 22px"
+      class="form-control"
+    />
+  </div>
+  <br />
+  <br />
+  <div class="row">
+    <button
+      type="submit"
+      class="btn btn-info"
+      style="margin-left: 2%; background-color: #4287f5"
+      (click)="onSubmit(Code, Name, Active)"
+    >
+      <i class="fa fa-database" aria-hidden="true"></i> SAVE
+    </button>
+    <br />
+    <button
+      class="btn btn-info"
+      (click)="gotoDepartments()"
+      style="
+        margin-left: 50%;
+        background-color: #616364;
+        border-color: #37474f;
+        color: #fff;
+      "
+    >
+      <i class="fa fa-arrow-left" aria-hidden="true"></i> BACK
+    </button>
+  </div>
+</div>

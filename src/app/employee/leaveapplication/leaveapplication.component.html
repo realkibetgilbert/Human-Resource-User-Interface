@@ -1,0 +1,45 @@
+<h2 style="background-color: rgb(105, 105, 245);color: white;width: 120%;">Leave Application</h2>
+<br> 
+
+<h1 style="margin-left: 200px;">Please Fill The Form Below To Apply Leave</h1>
+<div class="card" style="width: 40rem; height: 30rem; margin-left: 200px;">
+    
+    <div class="card-body">
+      <h2 class="card-title text-info">APPLY LEAVE</h2>
+      <form>
+        <label for="leave-type">Leave Type</label>
+        <select name="leave-type" id="leave-type" class="form-control" title="Please select a Leave Type" required>
+            <option></option>
+            <option>Sick Leave</option>
+            <option>Casual Leave</option>
+            <option>EBL</option>
+            <option>Maternity Leave</option>
+            <option>Unpaid Leave</option>
+            <option>Hourly Leave</option>
+        </select>
+
+        <div class="form-group pmd-textfield pmd-textfield-floating-label">
+            <label class="control-label" for="datepickerstart">Start Date</label>
+            <input type="date" class="form-control" id="datepickerstart" name="datepickerstart">
+        </div>
+
+        <div class="form-group pmd-textfield pmd-textfield-floating-label">
+            <label class="control-label" for="datepickerstart">End Date</label>
+            <input type="date" class="form-control" id="datepickerstart" name="datepickerstart">
+        </div>
+
+
+        <div class="form-group pmd-textfield pmd-textfield-floating-label">
+            <label>Reason</label>
+            <textarea class="form-control" id="reason" name="reason"></textarea>
+        </div>
+
+
+        
+            <button type="submit" class="btn btn-info pmd-ripple-effect pmd-btn-raised" name="applyleave" value="Apply Leave">Apply Leave</button>
+    
+      </form>
+
+    </div>
+  </div>
+

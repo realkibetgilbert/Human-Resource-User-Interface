@@ -1,0 +1,111 @@
+<h2 style="background-color: rgb(105, 105, 245); color: white; width: 100%">
+  Bank ::Query
+</h2>
+
+<!--Table goes here-->
+<div class="container">
+  <div class="card" *ngIf="employerbanklist || employerbanklist.length > 0">
+    <div class="card-body">
+      <table>
+        <tbody>
+          <tr *ngFor="let items of employerbanklist">
+            <div class="col-md-12">
+              <td>
+                <button
+                  class="btn btn-danger"
+                  (click)="openForEdit(items.BankId)"
+                >
+                  <i class="material-icons" style="font-size: 30px">edit</i>
+                </button>
+              </td>
+
+              <br />
+
+              <td>
+                <!--<button
+                  class="btn btn-danger"
+                  (click)="DeleteEmployerBank(items.BankId)"
+                >
+                  <i class="material-icons" style="font-size: 30px">delete</i>
+                </button> -->
+              </td>
+            </div>
+
+            <br />
+            <div class="col-md-12">
+              <Label class="h5">CODE</Label>
+              <br />
+              <td>{{ items.Code }}</td>
+            </div>
+            <br />
+            <div class="col-md-12">
+              <label class="h5">NAME</label>
+              <br />
+              <td>{{ items.Name }}</td>
+            </div>
+            <br />
+            <div class="col-md-12">
+              <label class="h5">ACTIVE</label>
+              <br />
+              <td>{{ items.Active }}</td>
+            </div>
+            <br />
+            <div class="col-md-12">
+              <label class="h5">BANK ACCOUNT</label>
+              <br />
+              <td>{{ items.BankAccount }}</td>
+            </div>
+            <br />
+            <div class="col-md-12">
+              <label class="h5">ADDRESS1</label>
+              <br />
+              <td>{{ items.Address1 }}</td>
+            </div>
+            <br />
+            <div class="col-md-12">
+              <label class="h5">ADDRESS2</label>
+              <br />
+              <td>{{ items.Address2 }}</td>
+            </div>
+            <br />
+            <div class="col-md-12">
+              <label class="h5">CITY</label>
+              <br />
+              <td>{{ items.City }}</td>
+            </div>
+            <br />
+            <div class="col-md-12">
+              <label class="h5">POSTALCODE</label>
+              <br />
+              <td>{{ items.PostalCode }}</td>
+            </div>
+            <br />
+            <div class="col-md-12">
+              <label class="h5">STATE</label>
+              <br />
+              <td>{{ items.State }}</td>
+            </div>
+            <br />
+            <div class="col-md-12">
+              <label class="h5">COUNTRY</label>
+              <br />
+              <td>{{ items.Country }}</td>
+            </div>
+            <br />
+            <div class="col-md-12">
+              <label class="h5">TELEPHONE</label>
+              <br />
+              <td>{{ items.Telephone }}</td>
+            </div>
+            <br />
+            <div class="col-md-12">
+              <label class="h5">FAX</label>
+              <br />
+              <td>{{ items.Fax }}</td>
+            </div>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

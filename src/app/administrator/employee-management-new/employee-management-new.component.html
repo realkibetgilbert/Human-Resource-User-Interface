@@ -1,0 +1,118 @@
+<!--This is the header-->
+<h2 style="background-color: #4287f5; color: white; width: 100%">
+  Employee::New
+</h2>
+<!--Form goes  here-->
+<div class="card">
+  <div class="card-body">
+    <div class="container">
+      <div class="col-md-12">
+        <label>NATIONAL ID</label>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="Id"
+          required
+          autofocus
+        />
+      </div>
+      <div class="col-md-12">
+        <label>NAME</label>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="Name"
+          placeholder="Enter Name"
+          required
+        />
+      </div>
+      <div class="col-md-12">
+        <label>GENDER</label>
+        <select
+          class="form-control"
+          [(ngModel)]="Gender"
+          aria-label="Default select example"
+          required
+        >
+          <option selected>Open this select Gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="col-md-12">
+        <label>POSITION</label>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="Position"
+          placeholder="Enter Position"
+          required
+        />
+      </div>
+
+      <div class="col-md-12">
+        <label>DEPARTMENT</label>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="Department"
+          placeholder="Enter Department"
+          required
+        />
+      </div>
+      <div class="col-md-12">
+        <label>DATEJOINED</label>
+        <input
+          type="date"
+          class="form-control"
+          [(ngModel)]="DateJoined"
+          id="inputDatejoined"
+          placeholder="Enter DateJoined"
+          required
+        />
+      </div>
+      <div class="col-md-12">
+        <label>STATUS</label>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="Status"
+          placeholder="Enter Status"
+          required
+        />
+      </div>
+      <div class="col-md-12">
+        <label>MODIFIED</label>
+        <input
+          type="date"
+          class="form-control"
+          [(ngModel)]="Modified"
+          placeholder="Enter Modified"
+          required
+        />
+      </div>
+    </div>
+    <br />
+    <div class="col-md-12">
+      <button
+        type="submit"
+        (click)="
+          onSubmit(
+            Id,
+            Name,
+            Gender,
+            Position,
+            Department,
+            DateJoined,
+            Status,
+            Modified
+          )
+        "
+        class="btn btn-primary"
+      >
+        <i class="fa fa-database" aria-hidden="true"></i> SAVE
+      </button>
+    </div>
+  </div>
+</div>

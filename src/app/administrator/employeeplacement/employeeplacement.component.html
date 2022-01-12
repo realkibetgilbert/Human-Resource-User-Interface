@@ -1,0 +1,55 @@
+<h2 style="background-color: rgb(105, 105, 245);color: white; width: 100%;">Placement::Query</h2>
+<div class="row">
+  <div class="col-md-2"></div>
+  <div class="col-md-4">
+  <button type="button" class="btn btn-outline-dark">Select Employee</button>
+  </div>
+  
+  <div class="col-md-4">
+      <button  [routerLink]="['/administrator/employee/placement/new']" routerLinkActive="router-link-active"   type="button" class="btn btn-outline-dark">New</button>
+      </div>
+      
+</div>
+
+
+
+<!--Table goes here-->
+
+
+<table class="table">
+   
+  <thead>
+    <tr>
+      <th scope="col">EffectiveDate</th>
+      <th scope="col">Jobposition </th>
+      <th scope="col"> Linemanager</th>
+      <th scope="col">Department</th>
+      <th scope="col">Branch </th>
+      <th scope="col">Level</th>
+      <th scope="col">Remark </th>
+      <th scope="col">Actions </th>
+
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let items of employeeplacementlist">
+      <td>{{items.EffectiveDate}}</td>
+      <td>{{items.JobPosition}}</td>
+      <td>{{items.LineManager}}</td>
+      <td>{{items.Department}}</td>
+      <td>{{items.Branch}}</td>
+      <td>{{items.Leveel}}</td>
+      <td>{{items.Remark}}</td>
+      <td>
+        <button type="button" class="btn btn-success" (click)="openForEdit(items.PlacementId)" > Edit </button>
+        <button type="button" class="btn btn-danger" (click)="DeleteEmployeePlacement(items.PlacementId)" style="margin-left: 3%;">Delete</button>
+      </td>
+    </tr>
+  
+  </tbody>
+</table>
+
+
+
+

@@ -1,0 +1,22 @@
+select{
+    height: 40px;
+    width: 100px;
+    
+}
+.table{
+    width: 180%;
+    border-collapse: separate;
+  border-spacing: 0 15px;
+}
+th {
+    background-color: #4287f5;
+    color: white;
+
+  }
+  th,
+td {
+  width: 150px;
+  text-align: center;
+  border: 1px solid whitesmoke;
+  padding: 4px;
+}

@@ -1,0 +1,52 @@
+<h2 style="background-color: rgb(105, 105, 245);color: white; width: 100%;">Placement::New</h2>
+
+<!--Placement form goes here-->
+
+<div class="card">
+  <div class="card-body">
+    <div class="container">
+      <div class="col-md-12">
+        <label for="">EFFECTIVEDATE</label>
+            <input type="date" class="form-control form-control-l" [(ngModel)]="EffectiveDate">
+
+      </div>
+
+      <div class="col-md-12">
+        <label >JOBPOSITION</label>
+        <input type="text" class="form-control form-control-l" [(ngModel)]="JobPosition"  placeholder="E.g HR manager">
+      </div>
+
+      <div class="col-md-12">
+        <label >LINE MANAGER</label>
+        <input type="text" class="form-control form-control-l" [(ngModel)]="LineManager">
+      </div>
+
+      <div class="col-md-12">
+        <label >DEPARTMENT</label>
+        <input type="text" class="form-control form-control-l" [(ngModel)]="Department" >
+      </div>
+
+      <div class="col-md-12">
+        <label >BRANCH</label>
+        <input type="text" class="form-control form-control-l" [(ngModel)]="Branch">
+      </div>
+      
+     
+      
+      <div class="col-md-12">
+        <label >LEVEL</label>
+        <input type="text" class="form-control form-control-l" [(ngModel)]="Leveel">
+      </div>
+
+      <div class="col-md-12">
+        <label >REMARK</label>
+        <input type="text" class="form-control form-control-l" [(ngModel)]="Remark" placeholder="Remark(200 characters max)">
+      </div>
+
+    </div>
+    <br>
+    <button type="submit" (click)="onSubmit( EffectiveDate,JobPosition,LineManager,Department,Branch,Leveel,Remark)" class="btn btn-primary btn-lg" > <span><i class="fa fa-database" aria-hidden="true"></i></span> SAVE</button>
+
+  </div>
+
+</div>

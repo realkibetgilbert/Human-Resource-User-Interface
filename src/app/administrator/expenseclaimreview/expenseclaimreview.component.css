@@ -1,0 +1,25 @@
+select{
+    height: 35px;
+    width: 150px;
+    margin-left: 5px;
+}
+
+label{
+    margin-left: 4px;
+}
+.table{
+    width: 120%;
+    border-collapse: separate;
+  border-spacing: 0 15px;
+}
+th {
+    background-color: #4287f5;
+    color: white;
+  }
+  th,
+td {
+  width: 120px;
+  text-align: center;
+  border: 1px solid whitesmoke;
+  padding: 4px;
+}

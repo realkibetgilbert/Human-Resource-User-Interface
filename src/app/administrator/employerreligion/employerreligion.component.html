@@ -1,0 +1,64 @@
+<h2 style="background-color: #4287f5; color: white; width: 100%">
+  Religion::Query
+</h2>
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-12">
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-2">
+        <button type="button" class="btn btn-outline-secondary">View</button>
+      </div>
+      <div class="col-md-1"></div>
+      <div class="col-md-2"></div>
+      <div class="col-md-1"></div>
+      <div class="col-md-2"></div>
+      <div class="col-md-1"></div>
+      <div class="col-md-2">
+        <button
+          type="button"
+          class="btn btn-outline-secondary"
+          [routerLink]="['/administrator/employer/religion/new']"
+          routerLinkActive="router-link-active"
+        >
+          New
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<br />
+<!--Table goes here-->
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Description</th>
+      <th scope="col">Active</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      *ngFor="
+        let items of religionList
+          | paginate: { itemsPerPage: 6, currentPage: p }
+      "
+    >
+      <td>{{ items.Description }}</td>
+      <td>{{ items.Active }}</td>
+      <td style="display: flex; justify-content: space-evenly">
+        <button class="btn btn-success" (click)="openForEdit(items.ReligionId)">
+          Edit</button
+        ><br />
+
+        <button
+          class="btn btn-danger"
+          (click)="DeleteEmployerReligion(items.ReligionId)"
+        >
+          Delete
+        </button>
+      </td>
+    </tr>
+  </tbody>
+  <pagination-controls (pageChange)="p = $event"> </pagination-controls>
+</table>

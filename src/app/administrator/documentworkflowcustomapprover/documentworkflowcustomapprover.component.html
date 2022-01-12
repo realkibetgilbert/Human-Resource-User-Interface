@@ -1,0 +1,50 @@
+<!--This is the header-->
+<h2 style="background-color: rgb(105, 105, 245);color: white;width: 120%;">Custom Approver::Query</h2>
+<!--This is the view new edit buttons-->
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-2">
+        <button type="button" class="btn btn-outline-dark">View</button>
+    </div>
+    <div class="col-md-1"></div>
+    <div class="col-md-2">
+        <button [routerLink]="['/administrator/documentworkflow/customApprover/new']" routerLinkActive="router-link-active"  type="button" class="btn btn-outline-dark">New</button>
+    </div>
+    <div class="col-md-1"></div>
+    <div class="col-md-2">
+        <button type="button" class="btn btn-outline-dark">Edit</button>
+    </div>
+    <div class="col-md-1"></div>
+    <div class="col-md-2">
+        <button type="button" class="btn btn-outline-dark">Delete</button>
+    </div>
+</div>
+        
+       
+        
+<!--Table goes here-->
+<br>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Code<i class="fa fa-caret-down" aria-hidden="true"></i></th>
+        <th scope="col">Role<i class="fa fa-caret-down" aria-hidden="true"></i></th>
+        <th scope="col"> DocumentWorkflow<i class="fa fa-caret-down" aria-hidden="true"></i></th>
+        <th scope="col"> Leave Workflow<i class="fa fa-caret-down" aria-hidden="true"></i></th>
+        <th scope="col"> Claim Workflow<i class="fa fa-caret-down" aria-hidden="true"></i></th>
+        <th scope="col">Modified<i class="fa fa-caret-down" aria-hidden="true"></i></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Boss</td>
+            <td>Business Owner</td>
+            <td><i class="fa fa-check-square" aria-hidden="true"></i></td>
+            <td><i class="fa fa-check-square" aria-hidden="true"></i></td>
+            <td><i class="fa fa-check-square" aria-hidden="true"></i></td>
+            <td>21/12/2020</td>
+          </tr>
+    
+    </tbody>
+  </table>
+

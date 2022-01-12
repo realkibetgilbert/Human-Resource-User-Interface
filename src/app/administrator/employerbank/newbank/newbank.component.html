@@ -1,0 +1,179 @@
+<!--This is the header-->
+<h2 style="background-color: #4287f5; color: white; width: 100%">Bank ::New</h2>
+<!--FORM CARD GOES HERE-->
+
+<div class="card">
+  <div class="card-body">
+    <div class="col-md-12">
+      <label for="">CODE</label>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="Code"
+        required
+        placeholder="EnterCode"
+      />
+    </div>
+
+    <br />
+    <div class="col-md-12">
+      <label for="">NAME</label>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="Name"
+        required
+        placeholder="EnterName"
+      />
+    </div>
+
+    <br />
+    <div class="col-md-12">
+      <label for="">ACTIVE</label>
+      <br />
+      <input type="checkbox" class="checkbox" [(ngModel)]="Active" />
+    </div>
+    <br />
+    <div class="col-md-12">
+      <label for="">IBAN/Bank Account</label>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="BankAccount"
+        required
+      />
+    </div>
+    <br />
+    <div class="col-md-12">
+      <h1 class="p-3 mb-2 bg-primary text-white">
+        <mat-icon>perm_phone_msg</mat-icon> CONTACT
+      </h1>
+    </div>
+    <br />
+
+    <div class="col-md-12">
+      <label for="">ADDRESS1</label>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="Address1"
+        required
+        placeholder="enter address1"
+      />
+    </div>
+    <br />
+    <div class="col-md-12">
+      <label for="">ADDRESS2</label>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="Address2"
+        required
+        placeholder="enter address 2"
+      />
+    </div>
+    <br />
+    <div class="col-md-12">
+      <label for="">CITY</label>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="City"
+        required
+        placeholder="enter city"
+      />
+    </div>
+    <br />
+    <div class="col-md-12">
+      <label for="">POSTALCODE</label>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="PostalCode"
+        required
+        placeholder="enter postalcode"
+      />
+    </div>
+    <br />
+    <div class="col-md-12">
+      <label for="">STATE</label>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="State"
+        required
+        placeholder="enter state"
+      />
+    </div>
+    <br />
+    <div class="col-md-12">
+      <label for="Country">COUNTRY/REGION</label>
+      <select class="custom-select" [(ngModel)]="Country">
+        <option selected>Select your Country</option>
+        <option *ngFor="let country of countries">
+          {{ country }}
+        </option>
+      </select>
+    </div>
+    <div class="col-md-12">
+      <label for="">TELEPHONE</label>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="Telephone"
+        required
+        placeholder="enter telephone"
+      />
+    </div>
+    <br />
+    <div class="col-md-12">
+      <label for="">FAX</label>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="Fax"
+        placeholder="Enterfax"
+        required
+      />
+    </div>
+    <br />
+
+    <div class="col-md-12">
+      <button
+        style="background-color: #4287f5"
+        type="submit"
+        (click)="
+          onSubmit(
+            Code,
+            Name,
+            Active,
+            BankAccount,
+            Address1,
+            Address2,
+            City,
+            PostalCode,
+            State,
+            Country,
+            Telephone,
+            Fax
+          )
+        "
+        class="btn btn-info"
+      >
+        <i class="fa fa-database" aria-hidden="true"></i> SAVE
+      </button>
+      <button
+        class="btn btn-info"
+        (click)="goToBank()"
+        style="
+          margin-left: 60%;
+          background-color: #616364;
+          border-color: #37474f;
+          color: #fff;
+        "
+      >
+        <i class="fa fa-arrow-left" aria-hidden="true"></i> BACK
+      </button>
+    </div>
+  </div>
+</div>

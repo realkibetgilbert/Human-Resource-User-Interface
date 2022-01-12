@@ -1,0 +1,200 @@
+<!--This is the ToolBar-->
+<br />
+<div class="container">
+  <div class="row">
+    <div class="col-md-2 img-responsive push-left">
+      <img src="../assets/images/HR.my.png" alt="" width="60" />
+    </div>
+    <br />
+    <div class="col-md-2">
+      <a [routerLink]="['/login']" class="btn btn-info btn-sm">LOGIN</a>
+    </div>
+    <div class="col-md-2">
+      <a [routerLink]="['/signup']" class="btn btn-info btn-sm">SIGNUP</a>
+    </div>
+    <div class="col-md-2">
+      <a [routerLink]="['/testimonial']" class="btn btn-info btn-sm">
+        TESTIMONIAL
+      </a>
+    </div>
+
+    <div class="col-md-2">
+      <a [routerLink]="['/userguide']" class="btn btn-info btn-sm">
+        USER GUIDE
+      </a>
+    </div>
+  </div>
+
+  <!---This is the link to signup-->
+  <h3 style="text-align: center; margin-top: 40px; font-size: 22px">
+    <a
+      class="text-info text-uppercase"
+      [routerLink]="['/signup']"
+      routerLinkActive="router-link-active"
+    >
+      Sign up Employer account
+    </a>
+  </h3>
+
+  <!--This is the employer  and administrator login and signup  Tabs -->
+
+  <div class="center-content">
+    <mat-card class="example-card">
+      <mat-card-content>
+        <mat-tab-group mat-align-tabs="start">
+          <mat-tab label="ADMINISTRATOR">
+            <mat-form-field class="example-full-width input-sm">
+              <mat-label>
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                Enter Email</mat-label
+              >
+              <input type="email" matInput placeholder="Email" required />
+              <mat-hint class="text-primary">kibetgilly354@gmail.com</mat-hint>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width input-sm">
+              <mat-label>
+                <i class="fa fa-key" aria-hidden="true"></i> Password
+              </mat-label>
+              <span>
+                <i
+                  class="material-icons"
+                  matSuffix
+                  (click)="hide = !hide"
+                  style="
+                    margin-left: 349px;
+                    bottom: 5%;
+                    cursor: pointer;
+                    transform: translate(0, -3%);
+                  "
+                  >{{ hide ? "visibility" : "visibility_off" }}</i
+                >
+              </span>
+              <input
+                type="password"
+                [type]="hide ? 'password' : 'text'"
+                matInput
+                placeholder="Password"
+                id="password"
+              />
+            </mat-form-field>
+
+            <a
+              [routerLink]="['/administrator/forgotpassword']"
+              routerLinkActive="router-link-active"
+              >Forgot Administrator Password?</a
+            >
+            <br />
+            <br />
+            <button (click)="logIn()" type="button" class="btn btn-info btn-sm">
+              ADMINISTRATOR LOGIN
+            </button>
+          </mat-tab>
+
+          <mat-tab label="EMPLOYEE">
+            <mat-form-field class="example-full-width input-sm">
+              <mat-label>
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                Enter Email</mat-label
+              >
+              <input type="email" matInput placeholder="Email" required />
+              <mat-hint class="text-primary">kibetgilly354@gmail.com</mat-hint>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width input-sm">
+              <mat-label>
+                <i class="fa fa-key" aria-hidden="true"></i> Password
+              </mat-label>
+              <span>
+                <i
+                  class="material-icons"
+                  matSuffix
+                  (click)="hide = !hide"
+                  style="
+                    margin-left: 349px;
+                    bottom: 5%;
+                    cursor: pointer;
+                    transform: translate(0, -3%);
+                  "
+                  >{{ hide ? "visibility" : "visibility_off" }}</i
+                >
+              </span>
+              <input
+                type="password"
+                [type]="hide ? 'password' : 'text'"
+                matInput
+                placeholder="Password"
+                id="password"
+              />
+            </mat-form-field>
+
+            <a
+              [routerLink]="['/employee/forgotpassword']"
+              routerLinkActive="router-link-active"
+              >Forgot Employee Password?</a
+            >
+            <br />
+            <br />
+            <button
+              [routerLink]="['/employee/home']"
+              routerLinkActive="router-link-active"
+              type="button"
+              class="btn btn-info btn-sm"
+            >
+              EMPLOYEE LOGIN
+            </button>
+          </mat-tab>
+        </mat-tab-group>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
+<div
+  class="guide"
+  style="
+    margin: 0 auto;
+    max-width: 600px;
+    padding-top: 15px;
+    padding-bottom: 30px;
+  "
+>
+  <p class="mat-headline font-weight-bold">My HR Login:</p>
+  <div class="Login-Text">
+    <ul>
+      <li>
+        Note that there are 2 login tabs, if you are signing in as:
+        <ul>
+          <li>Employer, select Administrator tab</li>
+          <li>Employee, select Employee tab</li>
+        </ul>
+      </li>
+      <li>
+        If you cannot sign in due to wrong login credentials, make sure that:
+        <ul>
+          <li>You select the correct login tab, or login URL</li>
+          <li>You enter correct email and password</li>
+          <li>
+            You select the correct role to sign in. If you are signing in as
+            Administrator, DO NOT select the <b>HR Role</b> option. Select the
+            <b>HR Role</b> option if you are signing in as either HR.my Manager
+            or Custom HR Role.
+          </li>
+          <li>
+            If all else fails, try to reset your password, as you may have a
+            typo in your password when you first signed up your account
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+<footer class="footer">
+  <div class="text-center">
+    <span class="text-center"></span>
+    Human Resource Management System from
+    <a href="https://www.micropointsystems.com/" target="_blank"
+      >The Micropoint Sytem Limited</a
+    >
+  </div>
+</footer>

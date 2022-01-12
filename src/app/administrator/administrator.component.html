@@ -1,0 +1,635 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="(isHandset$ | async) === false"
+  >
+    <mat-toolbar>
+      <mat-icon
+        style="cursor: pointer; margin-left: 1px"
+        (click)="(drawer.toggle)"
+      >
+        menu
+      </mat-icon>
+    </mat-toolbar>
+
+    <!--Beggining of ul-->
+    <ul>
+      <li>
+        <a
+          [routerLink]="['/administrator/home']"
+          routerLinkActive="router-link-active"
+          ><mat-icon aria-hidden="false" aria-label="Example home icon"
+            >dashboard</mat-icon
+          >
+          <span style="margin-left: 20px">Home</span></a
+        >
+      </li>
+      <br />
+      <!--Employee LI UL-->
+      <li>
+        <a class="employee-btn">
+          <mat-icon>account_box</mat-icon>
+          <span style="margin-left: 20px">Employee</span>
+          <i class="fa fa-chevron-down one" aria-hidden="true"></i>
+        </a>
+        <ul class="employee-show">
+          <li>
+            <a
+              [routerLink]="['/administrator/employee/management']"
+              routerLinkActive="router-link-active"
+              >Management</a
+            >
+            <br />
+            <a
+              [routerLink]="['/administrator/employee/placement']"
+              routerLinkActive="router-link-active"
+              >Placement</a
+            >
+            <br />
+            <a
+              [routerLink]="['/administrator/employee/employementterms']"
+              routerLinkActive="router-link-active"
+              >Employment Terms</a
+            >
+            <br />
+            <a
+              [routerLink]="['/administrator/employee/education']"
+              routerLinkActive="router-link-active"
+              >Education</a
+            >
+            <br />
+            <a
+              [routerLink]="['/administrator/employee/experience']"
+              routerLinkActive="router-link-active"
+              >Experience</a
+            >
+            <br />
+            <a
+              [routerLink]="['/administrator/employee/training']"
+              routerLinkActive="router-link-active"
+              >Training</a
+            >
+            <br />
+            <a
+              [routerLink]="['/administrator/employee/legalDocument']"
+              routerLinkActive="router-link-active"
+              >Legal Document</a
+            >
+            <br />
+            <a
+              [routerLink]="['/administrator/employee/webAccount']"
+              routerLinkActive="router-link-active"
+              >Web Account</a
+            >
+            <br />
+            <a
+              [routerLink]="['/administrator/employee/HRrole']"
+              routerLinkActive="router-link-active"
+              >HR Role</a
+            >
+          </li>
+        </ul>
+      </li>
+      <br />
+      <!--Employee Li Ul-->
+      <li>
+        <a class="Leave-btn">
+          <mat-icon>flight_takeoff</mat-icon>
+          <span style="margin-left: 20px">Leave</span>
+          <i class="fa fa-chevron-down two" aria-hidden="true"></i>
+        </a>
+        <ul class="Leave-show">
+          <li>
+            <a
+              [routerLink]="['/administrator/leave/management']"
+              routerLinkActive="router-link-active"
+              >Management</a
+            >
+            <br />
+            <a
+              [routerLink]="['/administrator/leave/planner']"
+              routerLinkActive="router-link-active"
+              >Planner</a
+            >
+            <br />
+            <a
+              [routerLink]="['/administrator/leave/transactionSummary']"
+              routerLinkActive="router-link-active"
+              >Transaction Summary</a
+            >
+            <br />
+            <a
+              [routerLink]="['/administrator/leave/entitlementSummary']"
+              routerLinkActive="router-link-active"
+              >Entitlement Summary</a
+            >
+            <br />
+            <a
+              [routerLink]="['/administrator/leave/type']"
+              routerLinkActive="router-link-active"
+              >Type</a
+            >
+            <br />
+            <a
+              [routerLink]="['/administrator/leave/earningPolicy']"
+              routerLinkActive="router-link-active"
+              >Earning Policy</a
+            >
+            <br />
+            <a
+              [routerLink]="['/administrator/leave/approvalWorkflow']"
+              routerLinkActive="router-link-active"
+              >Approval Workflow</a
+            >
+            <br />
+            <a
+              [routerLink]="['/administrator/leave/customApprover']"
+              routerLinkActive="router-link-active"
+              >Custom Approver</a
+            >
+            <br />
+            <a
+              [routerLink]="['/administrator/leave/workdays']"
+              routerLinkActive="router-link-active"
+              >Work Days</a
+            >
+            <br />
+            <a
+              [routerLink]="['/administrator/leave/holidays']"
+              routerLinkActive="router-link-active"
+              >Holidays</a
+            >
+          </li>
+        </ul>
+      </li>
+      <br />
+      <!--Employer Li Ul-->
+      <li>
+        <a class="employer-btn">
+          <mat-icon>business</mat-icon>
+          <span style="margin-left: 20px">Employer</span>
+          <i class="fa fa-chevron-down three" aria-hidden="true"></i>
+        </a>
+        <ul class="employer-show">
+          <li>
+            <a
+              [routerLink]="['/administrator/employer/information']"
+              routerLinkActive="router-link-active"
+              >Information</a
+            >
+          </li>
+          <li class="divider"></li>
+          <li>
+            <a
+              [routerLink]="['/administrator/employer/jobposition']"
+              routerLinkActive="router-link-active"
+              >JobPosition</a
+            >
+          </li>
+          <li class="divider"></li>
+          <li>
+            <a
+              [routerLink]="['/administrator/employer/department']"
+              routerLinkActive="router-link-active"
+              >Department</a
+            >
+          </li>
+
+          <li class="divider"></li>
+          <li>
+            <a
+              [routerLink]="['/administrator/employer/branch']"
+              routerLinkActive="router-link-active"
+              >Branch</a
+            >
+          </li>
+          <li class="divider"></li>
+          <li>
+            <a
+              [routerLink]="['/administrator/employer/bank']"
+              routerLinkActive="router-link-active"
+              >Bank</a
+            >
+          </li>
+          <li class="divider"></li>
+          <li>
+            <a
+              [routerLink]="['/administrator/employer/level']"
+              routerLinkActive="router-link-active"
+              >Level</a
+            >
+          </li>
+          <li class="divider"></li>
+          <li>
+            <a
+              [routerLink]="['/administrator/employer/course']"
+              routerLinkActive="router-link-active"
+              >Course</a
+            >
+          </li>
+          <li class="divider"></li>
+          <li>
+            <a
+              [routerLink]="['/administrator/employer/trainer']"
+              routerLinkActive="router-link-active"
+              >Trainer</a
+            >
+          </li>
+          <li class="divider"></li>
+          <li>
+            <a
+              [routerLink]="['/administrator/employer/ethnicity']"
+              routerLinkActive="router-link-active"
+              >Ethnicity</a
+            >
+          </li>
+          <li class="divider"></li>
+          <li>
+            <a
+              [routerLink]="['/administrator/employer/religion']"
+              routerLinkActive="router-link-active"
+              >Religion</a
+            >
+          </li>
+          <li class="divider"></li>
+          <li>
+            <a
+              [routerLink]="['/administrator/employer/documentCategory']"
+              routerLinkActive="router-link-active"
+              >Document Category</a
+            >
+          </li>
+          <li class="divider"></li>
+          <li>
+            <a
+              [routerLink]="['/administrator/empoyer/customApprover']"
+              routerLinkActive="router-link-active"
+              >Custom Approver</a
+            >
+          </li>
+          <li class="divider"></li>
+          <li>
+            <a
+              [routerLink]="['/administrator/employer/fileStorage']"
+              routerLinkActive="router-link-active"
+              >FileStorage</a
+            >
+          </li>
+          <li class="divider"></li>
+          <li>
+            <a
+              [routerLink]="['/administrator/employer/setting']"
+              routerLinkActive="router-link-active"
+              >Settings</a
+            >
+          </li>
+        </ul>
+      </li>
+      <br />
+      <!--Attendance Li Ul-->
+      <li>
+        <a class="Attendance-btn">
+          <mat-icon>access_time</mat-icon>
+          <span style="margin-left: 20px">Attendance</span>
+          <i class="fa fa-chevron-down four" aria-hidden="true"></i>
+        </a>
+        <ul class="Attendance-show">
+          <li>
+            <a
+              [routerLink]="['/administrator/attendance/management']"
+              routerLinkActive="router-link-active"
+              >Attendance Management</a
+            >
+          </li>
+          <li>
+            <a
+              [routerLink]="['/administrator/attendance/fieldCheckIn']"
+              routerLinkActive="router-link-active"
+              >Field Check</a
+            >
+          </li>
+          <li>
+            <a
+              [routerLink]="['/administrator/attendance/transactionSummary']"
+              routerLinkActive="router-link-active"
+              >AttendanceTransSummary</a
+            >
+          </li>
+          <li>
+            <a
+              [routerLink]="['/administrator/attendance/timeClockSummary']"
+              routerLinkActive="router-link-active"
+              >Time Clock Summary</a
+            >
+          </li>
+          <li>
+            <a
+              [routerLink]="['/administrator/attendance/workdays']"
+              routerLinkActive="router-link-active"
+              >WorkDays</a
+            >
+          </li>
+          <li>
+            <a
+              [routerLink]="['/administrator/attendance/holidays']"
+              routerLinkActive="router-link-active"
+              >Holidays</a
+            >
+          </li>
+        </ul>
+      </li>
+      <br />
+      <!--Team LI Ul-->
+      <li>
+        <a class="Team-btn">
+          <mat-icon>group</mat-icon>
+          <span style="margin-left: 20px">Team</span>
+          <i class="fa fa-chevron-down five" aria-hidden="true"></i>
+        </a>
+        <ul class="Team-show">
+          <li>
+            <a
+              [routerLink]="['/administrator/team/discussion']"
+              routerLinkActive="router-link-active"
+              >Discussion</a
+            >
+          </li>
+          <li>
+            <a
+              [routerLink]="['/administrator/team/documentsharing']"
+              routerLinkActive="router-link-active"
+              >Document&FormSharing</a
+            >
+          </li>
+          <li>
+            <a
+              [routerLink]="['/administrator/team/announcement']"
+              routerLinkActive="router-link-active"
+              >Announcement</a
+            >
+          </li>
+        </ul>
+      </li>
+      <br />
+      <!--Expense li ul-->
+      <li>
+        <a class="Expense-btn">
+          <mat-icon> money</mat-icon>
+          <span style="margin-left: 20px">Expense Claim</span>
+          <i class="fa fa-chevron-down six" aria-hidden="true"></i>
+        </a>
+        <ul class="Expense-show">
+          <li>
+            <a
+              [routerLink]="['/administrator/expenseclaim/management']"
+              routerLinkActive="router-link-active"
+              >Management</a
+            >
+          </li>
+          <li>
+            <a
+              [routerLink]="['/administrator/expenseclaim/review']"
+              routerLinkActive="router-link-active"
+              >Claim Review</a
+            >
+          </li>
+          <li>
+            <a
+              [routerLink]="['/administrator/expenseclaim/transactionSummary']"
+              routerLinkActive="router-link-active"
+              >Transaction Summary</a
+            >
+          </li>
+          <li>
+            <a
+              [routerLink]="['/administrator/expenseclaim/category']"
+              routerLinkActive="router-link-active"
+              >Expense Category</a
+            >
+          </li>
+          <li>
+            <a
+              [routerLink]="['/administrator/expenseclaim/type']"
+              routerLinkActive="router-link-active"
+              >Expense Type</a
+            >
+          </li>
+          <li>
+            <a
+              [routerLink]="['/administrator/expenseclaim/approvalWorkflow']"
+              routerLinkActive="router-link-active"
+              >Approval Workflow</a
+            >
+          </li>
+          <li>
+            <a
+              [routerLink]="['/administrator/expenseclaim/customApprover']"
+              routerLinkActive="router-link-active"
+              >Custom Approver</a
+            >
+          </li>
+        </ul>
+      </li>
+      <br />
+      <!--Document Workflow LI UL-->
+      <li>
+        <a class="Document-btn">
+          <mat-icon>folder</mat-icon>
+          <span style="margin-left: 20px">Document Workflow</span>
+          <i class="fa fa-chevron-down seven" aria-hidden="true"></i>
+        </a>
+        <ul class="Document-show">
+          <li>
+            <a
+              [routerLink]="['/administrator/documentworkflow/management']"
+              routerLinkActive="router-link-active"
+              >Management</a
+            >
+          </li>
+          <li>
+            <a
+              [routerLink]="['/administrator/documentworkflow/documentreview']"
+              routerLinkActive="router-link-active"
+              >Review</a
+            >
+          </li>
+          <li>
+            <a
+              [routerLink]="[
+                '/administrator/documentworkflow/approvalWorkflow'
+              ]"
+              routerLinkActive="router-link-active"
+              >Approval Workflow</a
+            >
+          </li>
+          <li>
+            <a
+              [routerLink]="['/administrator/documentworkflow/customApprover']"
+              routerLinkActive="router-link-active"
+              >Custom Approver</a
+            >
+          </li>
+        </ul>
+      </li>
+      <br />
+      <!--Payroll LI ul-->
+      <li>
+        <a class="Payroll-btn">
+          <mat-icon>account_balance</mat-icon>
+          <span style="margin-left: 20px">Payroll</span>
+          <i class="fa fa-chevron-down eight" aria-hidden="true"></i>
+        </a>
+        <ul class="Payroll-show">
+          <li>
+            <a
+              [routerLink]="['/administrator/payroll/salaryAdjustment']"
+              routerLinkActive="router-link-active"
+              >Salary Adjustment</a
+            >
+          </li>
+          <li>
+            <a
+              [routerLink]="['/administrator/payroll/process']"
+              routerLinkActive="router-link-active"
+              >Process</a
+            >
+          </li>
+          <li>
+            <a
+              [routerLink]="['/administrator/payroll/history']"
+              routerLinkActive="router-link-active"
+              >Payroll History</a
+            >
+          </li>
+          <li>
+            <a
+              [routerLink]="['/administrator/payroll/annualSalaryStatement']"
+              routerLinkActive="router-link-active"
+              >Annual Statement</a
+            >
+          </li>
+          <li>
+            <a
+              [routerLink]="['/administrator/payroll/variablePay']"
+              routerLinkActive="router-link-active"
+              >Variable Pay</a
+            >
+          </li>
+          <li>
+            <a
+              [routerLink]="['/administrator/payroll/variableDeduction']"
+              routerLinkActive="router-link-active"
+              >Variable Deduction</a
+            >
+          </li>
+          <li>
+            <a
+              [routerLink]="['/administrator/payroll/bonus']"
+              routerLinkActive="router-link-active"
+              >Bonus</a
+            >
+          </li>
+          <li>
+            <a
+              [routerLink]="['/administrator/payroll/statutoryContribution']"
+              routerLinkActive="router-link-active"
+              >Statutory Contribution</a
+            >
+          </li>
+        </ul>
+      </li>
+      <br />
+      <!--My Account li ul-->
+      <li>
+        <a class="Account-btn">
+          <mat-icon>account_circle</mat-icon>
+          <span style="margin-left: 20px">My Account</span>
+          <i class="fa fa-chevron-down nine" aria-hidden="true"></i>
+        </a>
+        <ul class="Account-show">
+          <li>
+            <a
+              [routerLink]="['/administrator/myaccount/changepassword']"
+              routerLinkActive="router-link-active"
+              >Change Password</a
+            >
+          </li>
+          <li>
+            <a
+              [routerLink]="['/administrator/myaccount/changeemail']"
+              routerLinkActive="router-link-active"
+              >Change Email</a
+            >
+          </li>
+          <li><a href="">Sign Out</a></li>
+        </ul>
+      </li>
+      <br />
+
+      <!--Testimonial-->
+      <li>
+        <a [routerLink]="['/testimonial']" routerLinkActive="router-link-active"
+          ><mat-icon>thumb_up</mat-icon>
+          <span style="margin-left: 20px">Testimonial</span>
+        </a>
+      </li>
+      <br />
+      <!--User Guide-->
+
+      <li>
+        <a [routerLink]="['/userguide']" routerLinkActive="router-link-active">
+          <mat-icon>contact_support</mat-icon>
+          <span style="margin-left: 20px">Userguide</span>
+        </a>
+      </li>
+    </ul>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <!--Tool Bar-->
+    <mat-toolbar style="background-color: hsl(0, 0%, 100%); width: 100%">
+      <div class="col-md-4">
+        <button
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="drawer.toggle()"
+          *ngIf="isHandset$ | async"
+        >
+          <mat-icon aria-label="Side nav toggle icon">
+            <i class="fa fa-bars" aria-hidden="true"></i
+          ></mat-icon>
+        </button>
+      </div>
+
+      <h1 class="h1 text-info" style="font-size: xx-large">
+        HR <span class="h2">.my</span>
+      </h1>
+
+      <button
+        class="btn btn-danger"
+        style="margin-left: 46%"
+        (click)="logOut()"
+      >
+        LOGOUT
+      </button>
+    </mat-toolbar>
+
+    <!-- Add Content Here to display them in the body view -->
+    <router-outlet></router-outlet>
+
+    <br />
+    <footer class="footer">
+      <div class="text-center capitalize">
+        Human Resource Management Sytem Designed and Developed By
+        <a href="https://www.micropointsystems.com/" target="_blank"
+          >The Micropoint Sytems Limited</a
+        >
+        Angular Team
+      </div>
+    </footer>
+  </mat-sidenav-content>
+</mat-sidenav-container>

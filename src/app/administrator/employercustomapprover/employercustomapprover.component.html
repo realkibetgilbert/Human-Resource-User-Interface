@@ -1,0 +1,60 @@
+<h2 style="background-color: rgb(105, 105, 245); color: white; width: 120%">
+  CustomApprover::Query
+</h2>
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-12">
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-2">
+        <button type="button" class="btn btn-outline-dark">View</button>
+      </div>
+      <div class="col-md-1"></div>
+      <div class="col-md-2">
+        <button
+          type="button"
+          class="btn btn-outline-dark"
+          [routerLink]="['/administrator/empoyer/customApprover/new']"
+          routerLinkActive="router-link-active"
+        >
+          New
+        </button>
+      </div>
+      <div class="col-md-1"></div>
+      <div class="col-md-2">
+        <button type="button" class="btn btn-outline-secondary">Edit</button>
+      </div>
+      <div class="col-md-1"></div>
+      <div class="col-md-2">
+        <button type="button" class="btn btn-outline-secondary">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
+<br />
+<!--Table goes here-->
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">
+        Role <i class="fa fa-caret-down" aria-hidden="true"></i>
+      </th>
+      <th scope="col">
+        Description <i class="fa fa-caret-down" aria-hidden="true"></i>
+      </th>
+      <th scope="col">
+        LeaveOverflow<i class="fa fa-caret-down" aria-hidden="true"></i>
+      </th>
+      <th scope="col">
+        DocumentWorkflow <i class="fa fa-caret-down" aria-hidden="true"></i>
+      </th>
+      <th scope="col">
+        ClaimWorkflow <i class="fa fa-caret-down" aria-hidden="true"></i>
+      </th>
+      <th scope="col">
+        Modified<i class="fa fa-caret-down" aria-hidden="true"></i>
+      </th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>

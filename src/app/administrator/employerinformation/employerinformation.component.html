@@ -1,0 +1,139 @@
+<h2
+  style="background-color: #4287f5; color: white; width: 100%; margin-top: 5px"
+>
+  Employer Information::View
+</h2>
+<div class="container">
+  <div class="card" *ngIf="employerlist || employerlist.length > 0">
+    <div class="card-body">
+      <table>
+        <tbody>
+          <tr *ngFor="let items of employerlist">
+            <div class="col-md-12">
+              <td>
+                <button
+                  class="btn btn-danger"
+                  (click)="openForEdit(items.EmployerId)"
+                >
+                  <i class="material-icons" style="font-size: 30px">edit</i>
+                </button>
+              </td>
+              <br />
+              <!-- 
+                <td>
+                <button
+                  class="btn btn-danger"
+                  (click)="DeleteEmployerInfo(items.EmployerId)"
+                >
+                  <i class="material-icons" style="font-size: 30px">delete</i>
+                </button>
+              </td>
+               -->
+            </div>
+            <div class="col-md-12">
+              <td>
+                <!--We use interpolation to perfom string concatination here-->
+                <img
+                  src="http://localhost:49986/image/{{ items.ImageName }}"
+                  alt="profilepicture"
+                  style="width: 250px; height: 250px"
+                />
+              </td>
+            </div>
+
+            <br />
+            <div class="col-md-12">
+              <Label class="h5">NAME</Label>
+              <br />
+              <td>{{ items.Name }}</td>
+            </div>
+            <br />
+            <div class="col-md-12">
+              <label class="h5">REGISTRATIONNUMBER</label>
+              <br />
+              <td>{{ items.RegistrationNumber }}</td>
+            </div>
+            <br />
+            <div class="col-md-12">
+              <label class="h5">INDUSTRY</label>
+              <br />
+              <td>{{ items.Industry }}</td>
+            </div>
+            <br />
+            <div class="col-md-12">
+              <label class="h5">HOMECOUNTRY</label>
+              <br />
+              <td>{{ items.HomeCountry }}</td>
+            </div>
+            <br />
+            <div class="col-md-12">
+              <label class="h5">PORTAL(URL)</label>
+              <br />
+              <td>{{ items.PortalUrl }}</td>
+            </div>
+            <br />
+            <div class="col-md-12">
+              <label class="h5">EMAIL</label>
+              <br />
+              <td>{{ items.Email }}</td>
+            </div>
+            <br />
+            <div class="col-md-12">
+              <label class="h5">WEBSITE</label>
+              <br />
+              <td>{{ items.WebSite }}</td>
+            </div>
+            <br />
+            <div class="col-md-12">
+              <label class="h5">ADDRESS1</label>
+              <br />
+              <td>{{ items.Address1 }}</td>
+            </div>
+            <br />
+            <div class="col-md-12">
+              <label class="h5">ADDRESS2</label>
+              <br />
+              <td>{{ items.Address2 }}</td>
+            </div>
+            <br />
+            <div class="col-md-12">
+              <label class="h5">CITY</label>
+              <br />
+              <td>{{ items.City }}</td>
+            </div>
+            <br />
+            <div class="col-md-12">
+              <label class="h5">POSTALCODE</label>
+              <br />
+              <td>{{ items.PostalCode }}</td>
+            </div>
+            <br />
+            <div class="col-md-12">
+              <label class="h5">STATE</label>
+              <br />
+              <td>{{ items.State }}</td>
+            </div>
+            <br />
+            <div class="col-md-12">
+              <label class="h5">COUNTRY</label>
+              <br />
+              <td>{{ items.Country }}</td>
+            </div>
+            <br />
+            <div class="col-md-12">
+              <label class="h5">TELEPHONE</label>
+              <br />
+              <td>{{ items.Telephone }}</td>
+            </div>
+            <br />
+            <div class="col-md-12">
+              <label class="h5">FAX</label>
+              <br />
+              <td>{{ items.Fax }}</td>
+            </div>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

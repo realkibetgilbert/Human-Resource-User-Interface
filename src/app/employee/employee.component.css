@@ -1,0 +1,138 @@
+.sidenav-container {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  box-sizing: border-box;
+}
+mat-icon {
+  font-size: 35px;
+  margin-left: -10px;
+  margin-top: 0px;
+}
+
+.sidenav {
+  width: 360px;
+  position: fixed;
+  height: 98%;
+  left: 0;
+  background: #4287f5;
+  color: white;
+}
+
+.sidenav.text {
+  color: black;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 65px;
+  text-align: center;
+  background: #4287f5;
+  letter-spacing: 1px;
+}
+
+ul {
+  height: 100%;
+  width: 90%;
+  list-style: none;
+  background: #4287f5;
+  background-color: #4287f5;
+  margin-right: -20px;
+}
+ul li {
+  background-color: #4287f5;
+  background: #4287f5;
+  margin-right: -20px;
+  margin-top: 10%;
+  color: black;
+  line-height: 30px;
+  margin-left: -25px;
+  cursor: pointer;
+}
+
+ul li a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-size: 22px;
+  padding-left: 20px;
+  font-weight: 500;
+  display: block;
+  width: 100%;
+  border-left: 3px solid transparent;
+  margin-left: -5px;
+}
+ul li a.hoover {
+  color: cyan;
+  background: #1e1e1e;
+  border-left-color: cyan;
+}
+ul ul {
+  position: static;
+  display: none;
+  background: #fafafa grey lighten-5;
+}
+ul.leave-show.show {
+  display: block;
+  line-height: 2px;
+}
+ul.expense-show.show1 {
+  display: block;
+  line-height: 2px;
+}
+
+ul.attendance-show.show2 {
+  display: block;
+  line-height: 2px;
+}
+
+ul.documentworkflow-show.show3 {
+  display: block;
+  line-height: 2px;
+}
+
+ul.team-show.show4 {
+  display: block;
+  line-height: 2px;
+}
+ul.payroll-show.show5 {
+  display: block;
+  line-height: 2px;
+}
+
+ul.profile-show.show6 {
+  display: block;
+  line-height: 2px;
+}
+
+ul ul li {
+  line-height: 42px;
+  border-bottom: none;
+}
+ul ul li a {
+  font-size: 18px;
+  color: black;
+  padding-left: 30px;
+  margin-left: 10%;
+  background-color: white;
+}
+ul li a i {
+  right: 20px;
+  top: 30%;
+  position: absolute;
+  transform: translateY(-50%);
+  font-size: 22px;
+  margin-top: 5%;
+
+  transition: transform 0.5s;
+}
+ul li a:hover i {
+  transition: transform 0.5s;
+
+  transform: translateY(-50%) rotate(+180deg, -180deg);
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}

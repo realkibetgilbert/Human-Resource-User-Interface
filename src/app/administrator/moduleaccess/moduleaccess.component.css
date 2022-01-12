@@ -1,0 +1,23 @@
+.card{
+    margin-left: 70px;
+    width: 70%;
+}
+.form-check-input{
+    top: .8rem;
+    width: 1.20rem;
+    height: 1.20rem;
+}
+.checkbox{
+    
+    width: 1.10rem;
+    height: 1.10rem;
+}
+input{
+    height: 1.20rem;
+    width: 1.30rem;
+}
+label{
+    font-size: larger;
+    margin-left: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

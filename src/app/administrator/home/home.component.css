@@ -1,0 +1,17 @@
+.q-card {
+  position: relative;
+  border-radius: 4px;
+  vertical-align: top;
+  background: #fff;
+}
+#q-app,
+body,
+html {
+  width: 100%;
+  direction: ltr;
+}
+body {
+  line-height: 1.5;
+  font-size: 14px;
+  min-height: 100%;
+}

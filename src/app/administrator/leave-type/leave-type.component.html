@@ -1,0 +1,58 @@
+<!--Header-->
+<h2 style="background-color: rgb(105, 105, 245);color: white; width: 100%;">Leave Type ::Query</h2>
+
+<!--Buttons-->
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-2">
+    <button type="button" class="btn btn-outline-dark">View</button>
+  </div>
+  <div class="col-md-2">
+    <button [routerLink]="['/administrator/leave/type/new']" routerLinkActive="router-link-active"  type="button" class="btn btn-outline-dark">New</button>
+
+  </div>
+  <div class="col-md-2">
+    <button type="button" class="btn btn-outline-dark">Edit</button>
+
+  </div>
+  <div class="col-md-3">
+    <button type="button" class="btn btn-outline-dark">Delete</button>
+
+  </div>
+
+  
+
+</div>
+<br>
+<!--Tables goes here-->
+
+<table class="table">
+    
+    <thead>
+      <tr>
+        <th scope="col">Code<i class="fa fa-caret-down" aria-hidden="true"></i></th>
+        <th scope="col">Description <i class="fa fa-caret-down" aria-hidden="true"></i></th>
+        <th scope="col">Active<i class="fa fa-caret-down" aria-hidden="true"></i></th>
+        <th scope="col"> LeaveUnit <i class="fa fa-caret-down" aria-hidden="true"></i></th>
+        <th scope="col">DayCount <i class="fa fa-caret-down" aria-hidden="true"></i></th>
+        <th scope="col">PaidLeave <i class="fa fa-caret-down" aria-hidden="true"></i></th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor= "let items of leavetypelist" >
+      <td>{{items.Code}}</td>
+      <td>{{items.Description}}</td>
+      <td>{{items.Active}}</td>
+      <td>{{items.LeaveUnit}}</td>
+      <td>{{items.DayCount}}</td>
+      <td>{{items.PaidLeave}}</td>
+      <td >
+        <button type="button" class="btn btn-success"  > Edit </button>
+        <button type="button" class="btn btn-danger" (click)="DeleteLeaveType(items.LeaveTypeId)" style="margin-left: 3%;">Delete</button>
+      </td>
+
+    </tr>
+    </tbody>
+  </table>
+

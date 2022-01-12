@@ -1,0 +1,146 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+   <mat-toolbar>
+    <mat-icon style="cursor: pointer;margin-left: 0px;" >
+      menu
+    </mat-icon>
+   </mat-toolbar>
+    <ul>
+     
+       <li><a [routerLink]="['/employee/home']" routerLinkActive="router-link-active"> <mat-icon aria-hidden="false" aria-label="Example home icon">dashboard</mat-icon> <span style="margin-left: 20px;">Home</span></a></li>
+      <br>
+    
+      <li><a  class="expense-btn">  <mat-icon> money</mat-icon> <span style="margin-left: 20px;">Expense Claim</span>
+        <i class="fa fa-chevron-down second" aria-hidden="true"></i>
+      </a>
+        <ul class="expense-show">
+          <li><a href="">Application</a></li>
+          <li><a href="">Review</a></li>
+        </ul>
+      </li>
+      <br>
+      <li><a  class=" leave-btn "><mat-icon>flight_takeoff</mat-icon> <span style="margin-left: 20px;">Leave</span>
+        <i class="fa fa-chevron-down first" aria-hidden="true"></i>
+      </a>
+        
+        <ul class="leave-show">
+          <li><a [routerLink]="['/employee/leave/application']" routerLinkActive="router-link-active" >Application</a></li>
+          <li><a [routerLink]="['/employee/leave/planner']" routerLinkActive="router-link-active" >Planner</a></li>
+          <li><a href="">Schedule</a></li>
+          <li><a href="">Review</a></li>
+          <li><a href="">Holiday</a></li>
+        </ul>
+      </li>
+      <br>
+      <li><a class="attendance-btn"> <mat-icon>access_time</mat-icon><span style="margin-left: 20px;">Attendance</span>
+        <i class="fa fa-chevron-down three" aria-hidden="true"></i>
+      </a>
+        <ul class="attendance-show">
+          <li><a href="">Attendance</a></li>
+          <li><a href="">Field Checkin</a></li>
+        </ul>
+      </li>
+      <br>
+      <li><a class="documentworkflow-btn"> 	<mat-icon>folder</mat-icon><span style="margin-left: 20px;">Document Workflow</span>
+        <i class="fa fa-chevron-down four" aria-hidden="true"></i>
+      </a>
+        <ul class="documentworkflow-show">
+          <li><a href="">Submission</a></li>
+          <li><a href="">Review</a></li>
+        </ul>
+      </li>
+      <br>
+      <li><a class="team-btn"> <mat-icon>group</mat-icon> <span style="margin-left: 20px;">Team</span>
+        <i class="fa fa-chevron-down five" aria-hidden="true"></i>
+      </a>
+        <ul class="team-show">
+          <li><a href="">Discussion</a></li>
+          <li><a href="">Document</a></li>
+          <li><a href="">Announcement</a></li>
+          <li><a href="">Employee Directory</a></li>
+
+        </ul>
+      </li>
+      <br>
+      
+      <li><a class="payroll-btn">   	<mat-icon>account_balance</mat-icon> <span style="margin-left: 20px;">Payroll</span>
+        <i class="fa fa-chevron-down six" aria-hidden="true"></i>
+      </a>
+        <ul class="payroll-show">
+          <li><a href="">Payslip</a></li>
+          <li><a href="">Salary</a></li>
+          <li><a href="">Salary Adjustment</a></li>
+        </ul>
+      </li>
+      <br>
+
+
+      <li><a class="profile-btn"> <mat-icon>account_circle</mat-icon> <span style="margin-left: 20px;">Profile</span>
+        <i class="fa fa-chevron-down seven" aria-hidden="true"></i>
+      </a>
+        <ul class="profile-show">
+          <li><a href="">Personal</a></li>
+          <li><a href="">Family</a></li>
+          <li><a href="">Contact</a></li>
+          <li><a href="">Health</a></li>
+          <li><a href="">Education</a></li>
+          <li><a href="">Experience</a></li>
+          <li><a href="">Legal Document</a></li>
+          <li><a href="">Job</a></li>
+          <li><a href="">Training</a></li>
+
+        </ul>
+      </li>
+       <br>
+      <li><a  [routerLink]="['/testimonial']" routerLinkActive="router-link-active" ><mat-icon>thumb_up</mat-icon> <span style="margin-left: 20px;">Testimonial</span> </a></li>
+<br>
+      <li><a    [routerLink]="['/userguide']" routerLinkActive="router-link-active"  > 	<mat-icon>contact_support</mat-icon> <span style="margin-left: 20px;">Userguide</span> </a></li>
+
+<br>
+<li><a    [routerLink]="['/login']" routerLinkActive="router-link-active"  > 	<mat-icon>exit_to_app</mat-icon> <span style="margin-left: 20px;">SignOut</span> </a></li>
+
+    </ul>
+
+
+
+      
+
+      
+
+
+      
+      
+      
+      
+
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar style="background-color:whitesmoke">
+      <div class="col-md-1">
+        <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      </div>
+      <div class="col-md-1"></div>
+      <div class="col-md-6" style="width: 120%;">
+        <span class="h1 text-info">HR  <span class="h2" style="color: black;">.my</span> </span>
+      </div>
+       
+     
+    </mat-toolbar>
+    <!-- Add Content Here -->
+    <router-outlet></router-outlet>
+    
+  </mat-sidenav-content>
+  
+  
+</mat-sidenav-container>
+
