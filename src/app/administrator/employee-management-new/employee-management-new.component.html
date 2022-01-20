@@ -7,24 +7,40 @@
   <div class="card-body">
     <div class="container">
       <div class="col-md-12">
-        <label>NATIONAL ID</label>
+        <label>ID</label>
         <input
           type="text"
           class="form-control"
           [(ngModel)]="Id"
           required
           autofocus
+          placeholder="Enter Id"
         />
       </div>
+      <br />
       <div class="col-md-12">
-        <label>NAME</label>
-        <input
-          type="text"
-          class="form-control"
-          [(ngModel)]="Name"
-          placeholder="Enter Name"
-          required
-        />
+        <div class="row">
+          <div class="col-md-6">
+            <label>FIRST NAME</label>
+            <input
+              type="text"
+              class="form-control"
+              [(ngModel)]="Name"
+              placeholder="Enter First Name"
+              required
+            />
+          </div>
+          <div class="col-md-6">
+            <label>LAST NAME</label>
+            <input
+              type="text"
+              class="form-control"
+              [(ngModel)]="Name"
+              placeholder="Enter LastName"
+              required
+            />
+          </div>
+        </div>
       </div>
       <div class="col-md-12">
         <label>GENDER</label>
@@ -41,54 +57,68 @@
         </select>
       </div>
       <div class="col-md-12">
-        <label>POSITION</label>
+        <label for="">BIRTH DATE</label>
         <input
-          type="text"
+          type="date"
           class="form-control"
-          [(ngModel)]="Position"
-          placeholder="Enter Position"
+          placeholder="Enter Birth Date"
           required
         />
       </div>
+      <br />
+      <div class="col-md-12">
+        <label>NATIONALITY</label>
+        <select class="custom-select">
+          <option selected>Select Your Nationality</option>
+          <option *ngFor="let nationality of nationalities">
+            {{ nationality }}
+          </option>
+        </select>
+      </div>
+      <br />
 
       <div class="col-md-12">
-        <label>DEPARTMENT</label>
+        <div class="row">
+          <div class="col-md-6">
+            <label>NATIONAL ID</label>
+            <input
+              type="text"
+              class="form-control"
+              [(ngModel)]="Department"
+              placeholder="Enter National Id"
+              required
+            />
+          </div>
+          <div class="col-md-6">
+            <label>PASSPORT</label>
+            <input
+              type="text"
+              class="form-control"
+              [(ngModel)]="Department"
+              placeholder="Enter Passport"
+              required
+            />
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="col-md-12">
+        <label>JOBPOSITION</label>
         <input
           type="text"
-          class="form-control"
-          [(ngModel)]="Department"
-          placeholder="Enter Department"
-          required
-        />
-      </div>
-      <div class="col-md-12">
-        <label>DATEJOINED</label>
-        <input
-          type="date"
           class="form-control"
           [(ngModel)]="DateJoined"
-          id="inputDatejoined"
-          placeholder="Enter DateJoined"
+          placeholder="Enter JopPosition"
           required
         />
       </div>
       <div class="col-md-12">
-        <label>STATUS</label>
+        <label>EMAIL</label>
         <input
-          type="text"
+          type="email"
           class="form-control"
           [(ngModel)]="Status"
-          placeholder="Enter Status"
-          required
-        />
-      </div>
-      <div class="col-md-12">
-        <label>MODIFIED</label>
-        <input
-          type="date"
-          class="form-control"
-          [(ngModel)]="Modified"
-          placeholder="Enter Modified"
+          placeholder="Enter Email for(for Employee   Web Account Activation"
           required
         />
       </div>
@@ -113,6 +143,22 @@
       >
         <i class="fa fa-database" aria-hidden="true"></i> SAVE
       </button>
+
+      <button
+        class="btn btn-primary"
+        [routerLink]="['/administrator/employer/information']"
+        routerLinkActive="router-link-active"
+        style="
+          margin-left: 50%;
+          border-radius: 2rem;
+          background-color: #37474f;
+          border-color: #37474f;
+          color: #fff;
+        "
+      >
+        <i class="fa fa-arrow-circle-left" aria-hidden="true"></i> BACK
+      </button>
     </div>
+    <br />
   </div>
 </div>
