@@ -1,15 +1,18 @@
-<h2 style="background-color: rgb(105, 105, 245);color: white; width: 100%;">Employment Terms::New</h2>
-
+<h2 style="background-color: rgb(105, 105, 245); color: white; width: 100%">
+  Employment Terms::New
+</h2>
 
 <!--Form goes here-->
 <div class="card">
   <div class="card-body">
     <div class="container">
-      
-
       <div class="col-md-12">
-        <label >JOBTYPE</label>
-        <select class="form-select form-control form-control-l" [(ngModel)]="JobType" aria-label="Default select example">
+        <label>JOBTYPE</label>
+        <select
+          class="form-select form-control form-control-l"
+          [(ngModel)]="JobType"
+          aria-label="Default select example"
+        >
           <option selected>Open this select menu</option>
           <option value="1">Permanent</option>
           <option value="2">Contract</option>
@@ -18,10 +21,13 @@
         </select>
       </div>
 
-
       <div class="col-md-12">
-        <label >JOBSTATUS</label>
-        <select class="form-select form-control form-control-l" [(ngModel)]="JobStatus" aria-label="Default select example">
+        <label>JOBSTATUS</label>
+        <select
+          class="form-select form-control form-control-l"
+          [(ngModel)]="JobStatus"
+          aria-label="Default select example"
+        >
           <option selected>Open this select menu</option>
           <option value="1">Confirmed</option>
           <option value="2">Probabation</option>
@@ -29,53 +35,101 @@
           <option value="3">Dismissed</option>
         </select>
       </div>
-      
-       
 
       <div class="col-md-12">
         <label for="">LEAVEWORKFLOW</label>
-            <input type="text" class="form-control form-control-l" [(ngModel)]="LeaveWorkFlow">
+        <input
+          type="text"
+          class="form-control form-control-l"
+          [(ngModel)]="LeaveWorkFlow"
+        />
       </div>
-  
 
       <div class="col-md-12">
         <label for="">WORKDAY</label>
-            <input type="text" class="form-control form-control-l" [(ngModel)]="WorkDay">
+        <input
+          type="text"
+          class="form-control form-control-l"
+          [(ngModel)]="WorkDay"
+        />
       </div>
-  
+
       <div class="col-md-12">
         <label for="">HOLIDAY</label>
-            <input type="text" class="form-control form-control-l" [(ngModel)]="Holiday">
+        <input
+          type="text"
+          class="form-control form-control-l"
+          [(ngModel)]="Holiday"
+        />
       </div>
-  
-      
 
       <div class="col-md-12">
         <div class="row">
           <div class="col-md-6">
             <label for="">TERMSTART</label>
-            <input type="date" class="form-control form-control-l" [(ngModel)]="TermStart">
-
+            <input
+              type="date"
+              class="form-control form-control-l"
+              [(ngModel)]="TermStart"
+            />
           </div>
           <div class="col-md-6">
             <label for="">TERMEND</label>
-            <input type="date" class="form-control form-control-l" [(ngModel)]="TermEnd">
+            <input
+              type="date"
+              class="form-control form-control-l"
+              [(ngModel)]="TermEnd"
+            />
           </div>
-
         </div>
-
       </div>
-        
-      <div class="col-md-12">
-        <label >REMARK</label>
-        <input type="text" class="form-control form-control-l" [(ngModel)]="Remark" placeholder="Remark(200 characters max)">
 
+      <div class="col-md-12">
+        <label>REMARK</label>
+        <input
+          type="text"
+          class="form-control form-control-l"
+          [(ngModel)]="Remark"
+          placeholder="Remark(200 characters max)"
+        />
+      </div>
+      <br />
+      <div class="col-md-12">
+        <button
+          type="submit"
+          (click)="
+            onSubmit(
+              JobType,
+              JobStatus,
+              LeaveWorkFlow,
+              WorkDay,
+              Holiday,
+              TermStart,
+              TermEnd,
+              Remark
+            )
+          "
+          class="btn btn-primary"
+        >
+          <span><i class="fa fa-database" aria-hidden="true"></i></span> SAVE
+        </button>
+
+        <button
+          class="btn btn-primary"
+          [routerLink]="['/administrator/employee/management']"
+          routerLinkActive="router-link-active"
+          style="
+            margin-left: 50%;
+            border-radius: 2rem;
+            background-color: #37474f;
+            border-color: #37474f;
+            color: #fff;
+          "
+        >
+          <i class="fa fa-arrow-circle-left" aria-hidden="true"></i> BACK
+        </button>
       </div>
     </div>
-    <br>
-    <button type="submit" (click)="onSubmit( JobType,JobStatus,LeaveWorkFlow,WorkDay,Holiday,TermStart,TermEnd,Remark)" class="btn btn-primary btn-lg" > <span><i class="fa fa-database" aria-hidden="true"></i></span> SAVE</button>
-
+    <br />
   </div>
-
 </div>
-

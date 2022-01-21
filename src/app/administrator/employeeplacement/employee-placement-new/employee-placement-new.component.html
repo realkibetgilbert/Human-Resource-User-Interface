@@ -1,4 +1,6 @@
-<h2 style="background-color: rgb(105, 105, 245);color: white; width: 100%;">Placement::New</h2>
+<h2 style="background-color: rgb(105, 105, 245); color: white; width: 100%">
+  Placement::New
+</h2>
 
 <!--Placement form goes here-->
 
@@ -7,46 +9,103 @@
     <div class="container">
       <div class="col-md-12">
         <label for="">EFFECTIVEDATE</label>
-            <input type="date" class="form-control form-control-l" [(ngModel)]="EffectiveDate">
-
+        <input
+          type="date"
+          class="form-control form-control-l"
+          [(ngModel)]="EffectiveDate"
+        />
       </div>
-
-      <div class="col-md-12">
-        <label >JOBPOSITION</label>
-        <input type="text" class="form-control form-control-l" [(ngModel)]="JobPosition"  placeholder="E.g HR manager">
-      </div>
-
-      <div class="col-md-12">
-        <label >LINE MANAGER</label>
-        <input type="text" class="form-control form-control-l" [(ngModel)]="LineManager">
-      </div>
+      <br />
 
       <div class="col-md-12">
-        <label >DEPARTMENT</label>
-        <input type="text" class="form-control form-control-l" [(ngModel)]="Department" >
+        <label>JOBPOSITION</label>
+        <input
+          type="text"
+          class="form-control form-control-l"
+          [(ngModel)]="JobPosition"
+          placeholder="E.g HR manager"
+        />
       </div>
-
+      <br />
       <div class="col-md-12">
-        <label >BRANCH</label>
-        <input type="text" class="form-control form-control-l" [(ngModel)]="Branch">
+        <label>LINE MANAGER</label>
+        <input
+          type="text"
+          class="form-control form-control-l"
+          [(ngModel)]="LineManager"
+        />
       </div>
-      
-     
-      
+      <br />
       <div class="col-md-12">
-        <label >LEVEL</label>
-        <input type="text" class="form-control form-control-l" [(ngModel)]="Leveel">
+        <label>DEPARTMENT</label>
+        <input
+          type="text"
+          class="form-control form-control-l"
+          [(ngModel)]="Department"
+        />
       </div>
-
+      <br />
       <div class="col-md-12">
-        <label >REMARK</label>
-        <input type="text" class="form-control form-control-l" [(ngModel)]="Remark" placeholder="Remark(200 characters max)">
+        <label>BRANCH</label>
+        <input
+          type="text"
+          class="form-control form-control-l"
+          [(ngModel)]="Branch"
+        />
       </div>
+      <br />
+      <div class="col-md-12">
+        <label>LEVEL</label>
+        <input
+          type="text"
+          class="form-control form-control-l"
+          [(ngModel)]="Leveel"
+        />
+      </div>
+      <br />
+      <div class="col-md-12">
+        <label>REMARK</label>
+        <input
+          type="text"
+          class="form-control form-control-l"
+          [(ngModel)]="Remark"
+          placeholder="Remark(200 characters max)"
+        />
+      </div>
+      <br />
+      <div class="col-md-12">
+        <button
+          type="submit"
+          (click)="
+            onSubmit(
+              EffectiveDate,
+              JobPosition,
+              LineManager,
+              Department,
+              Branch,
+              Leveel,
+              Remark
+            )
+          "
+          class="btn btn-primary"
+        >
+          <span><i class="fa fa-database" aria-hidden="true"></i></span> SAVE
+        </button>
 
+        <button
+          class="btn btn-primary"
+          [routerLink]="['//administrator/employee/placement']"
+          style="
+            margin-left: 50%;
+            border-radius: 2rem;
+            background-color: #37474f;
+            border-color: #37474f;
+            color: #fff;
+          "
+        >
+          <i class="fa fa-arrow-circle-left" aria-hidden="true"></i> BACK
+        </button>
+      </div>
     </div>
-    <br>
-    <button type="submit" (click)="onSubmit( EffectiveDate,JobPosition,LineManager,Department,Branch,Leveel,Remark)" class="btn btn-primary btn-lg" > <span><i class="fa fa-database" aria-hidden="true"></i></span> SAVE</button>
-
   </div>
-
 </div>
