@@ -1,60 +1,83 @@
-<h2 style="background-color: rgb(105, 105, 245);color: white; width: 100%;">Legal Document::New</h2>
+<h2 style="background-color: rgb(105, 105, 245); color: white; width: 100%">
+  Legal Document::New
+</h2>
 <!--This is the inputs-->
 <div class="card">
   <div class="card-body">
     <div class="container">
-
       <div class="col-md-12">
-        <label >DOCUMENT TYPE</label>
-        <input type="text" class="form-control form-control-l"  placeholder="E.g Passport,visa,permit">
+        <label>DOCUMENT TYPE</label>
+        <input
+          type="text"
+          class="form-control form-control-l"
+          placeholder="E.g Passport,visa,permit"
+        />
       </div>
-<br>
+      <br />
       <div class="col-md-12">
-        <label >DOCUMENT ID</label>
-        <input type="text" class="form-control form-control-l"  placeholder="E.g PassportNO,License no">
-
+        <label>DOCUMENT ID</label>
+        <input
+          type="text"
+          class="form-control form-control-l"
+          placeholder="E.g PassportNO,License no"
+        />
       </div>
-<br>
+      <br />
       <div class="col-md-12">
-         <div class="row">
-           <div class="col-md-4">
-            <label >VALID FROM</label>
-            <input type="date" class="form-control form-control-l" >
-    
-
-           </div>
-           <div class="col-md-4">
-            <label >EXPIRY</label>
-            <input type="date" class="form-control form-control-l" >
+        <div class="row">
+          <div class="col-md-6">
+            <label>VALID FROM</label>
+            <input type="date" class="form-control form-control-l" />
           </div>
-         </div>
+          <div class="col-md-6">
+            <label>EXPIRY</label>
+            <input type="date" class="form-control form-control-l" />
+          </div>
+        </div>
       </div>
-<br>
+      <br />
       <div class="col-md-12">
-        <label >EXPIRY ALERT</label>
-        <br>
-            <input type="checkbox" style="width: 30px;height: 30px;" >
+        <label>EXPIRY ALERT</label>
+        <br />
+        <input type="checkbox" style="width: 30px; height: 30px" />
       </div>
-<br>
+      <br />
       <div class="col-md-12">
-        <label >ATTACHMENT</label>
-        
+        <label>ATTACHMENT</label>
+
         <div class="custom-file">
-          <input type="file" class="custom-file-input">
+          <input type="file" class="custom-file-input" />
           <label class="custom-file-label">Choose file</label>
         </div>
-            
       </div>
-<br>
+      <br />
       <div class="col-md-12">
-        <label >REMARK</label>
-            <input type="text" class="form-control form-control-l" placeholder="Remark(200 characters max)" >
-
+        <label>REMARK</label>
+        <input
+          type="text"
+          class="form-control form-control-l"
+          placeholder="Remark(200 characters max)"
+        />
       </div>
-
     </div>
-<br>
-<button type="submit"  class="btn btn-primary btn-lg" > <span><i class="fa fa-database" aria-hidden="true"></i></span> SAVE</button>
+    <br />
+    <div class="col-md-12">
+      <button type="submit" class="btn btn-primary btn-md">
+        <span><i class="fa fa-database" aria-hidden="true"></i></span> SAVE
+      </button>
+      <button
+        class="btn btn-primary btn-md"
+        [routerLink]="['/administrator/employee/legalDocument']"
+        routerLinkActive="router-link-active"
+        style="
+          margin-left: 50%;
+          background-color: #37474f;
+          border-color: #37474f;
+          color: #fff;
+        "
+      >
+        <i class="fa fa-arrow-circle-left" aria-hidden="true"></i> BACK
+      </button>
+    </div>
   </div>
-
 </div>
