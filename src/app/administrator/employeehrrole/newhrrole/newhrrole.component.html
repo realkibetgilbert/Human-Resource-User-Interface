@@ -1,42 +1,129 @@
 <!--This is the header-->
-<h2 style="background-color: rgb(105, 105, 245);color: white; width: 100%;">HR Role::New</h2>
+<h2 style="background-color: rgb(105, 105, 245); color: white; width: 100%">
+  HR Role::New
+</h2>
 <!--This are the inputs-->
 
-
-<div class="card" style="margin-top: 5%;margin-right: 2%;margin-left: 2%;">
+<div class="card" style="margin-top: 5%; margin-right: 2%; margin-left: 2%">
   <div class="card-body">
-
-    
-<div class="container">
-  
-  <div class="col-md-12">
-    <label >CODE</label>
-    <input type="text" class="form-control form-control-l" [(ngModel)]="Code" placeholder="Enter Code">
-    
+    <div class="container">
+      <div class="col-md-12">
+        <label>CODE</label>
+        <input
+          type="text"
+          class="form-control form-control-l"
+          [(ngModel)]="Code"
+          placeholder="Enter Code"
+        />
+      </div>
+      <br />
+      <div class="col-md-12">
+        <label>DESCRIPTION</label>
+        <input
+          type="text"
+          class="form-control form-control-lg"
+          [(ngModel)]="Description"
+          placeholder="Enter Description"
+        />
+      </div>
+      <br />
+      <div class="col-md-12">
+        <label>ACTIVE</label>
+        <input
+          class="form-control form-control-lg"
+          type="checkbox"
+          [(ngModel)]="Active"
+          style="width: 30px; height: 30px"
+        />
+      </div>
+      <br />
+      <div class="col-md-12">
+        <h1 class="h4 p-3 mb-2 bg-primary text-white">EMPLOYEE</h1>
+      </div>
+      <br />
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-6">
+            <label for="" class="text-uppercase">management/request</label>
+            <select class="form-control" aria-label="Default select example">
+              <option selected>Modify</option>
+              <option value="1">View</option>
+              <option value="2">No Access</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <label for="" class="text-uppercase">placement</label>
+            <select class="form-control" aria-label="Default select example">
+              <option selected>Modify</option>
+              <option value="1">View</option>
+              <option value="2">No Access</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-6">
+            <label for="" class="text-uppercase">employment terms</label>
+            <select class="form-control" aria-label="Default select example">
+              <option selected>Modify</option>
+              <option value="1">View</option>
+              <option value="2">No Access</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <label for="" class="text-uppercase">education</label>
+            <select class="form-control" aria-label="Default select example">
+              <option selected>Modify</option>
+              <option value="1">View</option>
+              <option value="2">No Access</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-6">
+            <label for="" class="text-uppercase">experience</label>
+            <select class="form-control" aria-label="Default select example">
+              <option selected>Modify</option>
+              <option value="1">View</option>
+              <option value="2">No Access</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <label for="" class="text-uppercase">training</label>
+            <select class="form-control" aria-label="Default select example">
+              <option selected>Modify</option>
+              <option value="1">View</option>
+              <option value="2">No Access</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-6">
+            <label for="" class="text-uppercase">Legal Document</label>
+            <select class="form-control" aria-label="Default select example">
+              <option selected>Modify</option>
+              <option value="1">View</option>
+              <option value="2">No Access</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <br />
+      <button
+        type="submit"
+        (click)="onSubmit(Code, Description, Active)"
+        class="btn btn-primary btn-lg"
+      >
+        <span><i class="fa fa-database" aria-hidden="true"></i></span> SAVE
+      </button>
+    </div>
   </div>
-  <br>
-  <div class="col-md-12">
-    <label >DESCRIPTION</label>
-    <input type="text" class="form-control form-control-lg" [(ngModel)]="Description"  placeholder="Enter Description">
-
-
-  </div>
-  <br>
-  <div class="col-md-12">
-    <label>ACTIVE</label>
-    <input class="form-control form-control-lg" type="checkbox" [(ngModel)]="Active" style="width: 30px;height: 30px;" >
-
-  </div>
-  
-<br>
-<button type="submit" (click)="onSubmit(Code,Description,Active)" class="btn btn-primary btn-lg"> <span><i class="fa fa-database" aria-hidden="true"></i></span> Submit</button>
-
 </div>
-
-
-  </div>
-
-</div>
-
-
-
