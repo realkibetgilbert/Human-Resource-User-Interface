@@ -1,52 +1,55 @@
-<br>
-<h2 style="background-color: rgb(105, 105, 245);color: white; width: 120%;">Announcement ::Query</h2>
+<br />
+<h2 style="background-color: rgb(105, 105, 245); color: white; width: 100%">
+  Announcement ::Query
+</h2>
 <div class="row">
-
-    <div class="col-md-1"></div>
-    <div class="col-md-12">
-        <div class="row">
-            <div class="col-md-1"></div>
-            <div class="col-md-2">
-                <button type="button" class="btn btn-outline-secondary">View</button>
-
-            </div>
-            <div class="col-md-1"></div>
-            <div class="col-md-2">
-                <button type="button"  class="btn btn-outline-secondary" [routerLink]="['/administrator/team/announcement/new']" routerLinkActive="router-link-active"     >New</button>
-
-            </div>
-            <div class="col-md-1"></div>
-            <div class="col-md-2">
-                <button type="button" class="btn btn-outline-secondary">Edit</button>
-
-            </div>
-            <div class="col-md-1"></div>
-            <div class="col-md-2">
-                <button type="button" class="btn btn-outline-secondary">Delete</button>
-
-            </div>
-
-        </div>
-
+  <div class="col-md-1"></div>
+  <div class="col-md-12">
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-2">
+        <button type="button" class="btn btn-outline-secondary">View</button>
+      </div>
+      <div class="col-md-1"></div>
+      <div class="col-md-2"></div>
+      <div class="col-md-1"></div>
+      <div class="col-md-2"></div>
+      <div class="col-md-1"></div>
+      <div class="col-md-2">
+        <button
+          type="button"
+          class="btn btn-outline-secondary"
+          [routerLink]="['/administrator/team/announcement/new']"
+          routerLinkActive="router-link-active"
+        >
+          New
+        </button>
+      </div>
     </div>
+  </div>
 </div>
-<br>
+<br />
 
 <!--Table goes here-->
 <table class="table">
-    
-    <thead>
-      <tr>
-        <th scope="col">Date<i class="fa fa-caret-down" aria-hidden="true"></i></th>
-        <th scope="col">Title <i class="fa fa-caret-down" aria-hidden="true"></i></th>
-        <th scope="col">Published <i class="fa fa-caret-down" aria-hidden="true"></i></th>
-        <th scope="col">Modified <i class="fa fa-caret-down" aria-hidden="true"></i></th>
-        
-      </tr>
-    </thead>
-    <tbody>
-        
-    </tbody>
-  </table>
-
-
+  <thead>
+    <tr>
+      <th scope="col">Title</th>
+      <th scope="col">Date</th>
+      <th scope="col">Published</th>
+      <th scope="col">Attachment</th>
+      <th scope="col">NotifyEmployees</th>
+      <th scope="col">Content</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of announcements">
+      <td>{{ item.title }}</td>
+      <td>{{ item.date }}</td>
+      <td>{{ item.published }}</td>
+      <td>{{ item.attachment }}</td>
+      <td>{{ item.notify }}</td>
+      <td>{{ item.content }}</td>
+    </tr>
+  </tbody>
+</table>
