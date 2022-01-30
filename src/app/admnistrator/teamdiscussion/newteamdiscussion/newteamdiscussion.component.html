@@ -1,30 +1,61 @@
-<h2 style="background-color: rgb(105, 105, 245);color: #ffffff;">New::Topic</h2>
+<h2 style="background-color: #4287f5; color: white; width: 100%">
+  New:: Topic
+</h2>
 <!--This is the form-->
 <div class="card">
   <div class="card-body">
     <div class="col-md-12">
       <label for="exampleInputEmail1">Title</label>
-      <input type="text" class="form-control form-control-lg" placeholder="Title">
+      <input
+        type="text"
+        class="form-control form-control-lg"
+        placeholder="Title"
+      />
     </div>
-    <br>
+    <br />
     <div class="col-md-12">
       <label for="exampleFormControlFile1">Attachment</label>
-      <input type="file" class="form-control-file form-control-lg " id="exampleFormControlFile1" placeholder="Attachment" style="cursor: pointer;">
+      <input
+        type="file"
+        class="form-control-file form-control-lg"
+        id="exampleFormControlFile1"
+        placeholder="Attachment"
+        style="cursor: pointer"
+      />
     </div>
-    <br>
+    <br />
     <div class="col-md-12">
       <label for="exampleInputPassword1">Content</label>
-      <input type="text" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Content(5000 characters max)">
-
-
+      <input
+        type="text"
+        class="form-control form-control-lg"
+        id="exampleInputPassword1"
+        placeholder="Content(5000 characters max)"
+      />
     </div>
-    <br>
+    <br />
 
-    
-    <button type="submit" class="btn btn-primary btn-lg" style="margin-left: 1%;"> <span><i class="fa fa-database" aria-hidden="true"></i></span>SUBMIT</button>
-
+    <div class="col-md-12">
+      <button
+        type="submit"
+        class="btn btn-primary btn-sm"
+        style="margin-left: 1%"
+      >
+        <span><i class="fa fa-database" aria-hidden="true"></i></span> SUBMIT
+      </button>
+      <button
+        class="btn btn-primary btn-sm"
+        [routerLink]="['/administrator/team/discussion']"
+        routerLinkActive="router-link-active"
+        style="
+          margin-left: 50%;
+          background-color: #37474f;
+          border-color: #37474f;
+          color: #fff;
+        "
+      >
+        <i class="fa fa-arrow-circle-left" aria-hidden="true"></i> BACK
+      </button>
+    </div>
   </div>
-
 </div>
-
-
