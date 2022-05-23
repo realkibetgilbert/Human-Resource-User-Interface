@@ -14,7 +14,6 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "allowedCommonJsDependencies": [
-
               "@angularclass/hmr",
               "moment",
               "moment/locale/zh-cn",
@@ -30,10 +29,7 @@
               "pikaday",
               "ng2-flatpickr",
               "ng2-order-pipe"
-            
             ],
-              
-          
             "outputPath": "dist/HR",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -49,14 +45,12 @@
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "node_modules/font-awesome/css/font-awesome.css",
               "node_modules/jquery/dist/jquery.min.js",
-              
               "src/styles.css"
-              
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.min.js"
-          ]
+            ]
           },
           "configurations": {
             "production": {
@@ -152,5 +146,8 @@
       }
     }
   },
-  "defaultProject": "HR"
+  "defaultProject": "HR",
+  "cli": {
+    "analytics": false
+  }
 }
