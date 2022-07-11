@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
-
 import { Ng2OrderModule } from 'ng2-order-pipe';
 
 import { ToastrModule } from 'ngx-toastr';
@@ -148,6 +147,7 @@ import { NewpayrollbonusComponent } from './administrator/payrollbonus/newpayrol
 import { NewstatutorycontributionComponent } from './administrator/statutorycontribution/newstatutorycontribution/newstatutorycontribution.component';
 import { NewleaveearningpolicyComponent } from './administrator/leave-earning-policy/newleaveearningpolicy/newleaveearningpolicy.component';
 import { NewteamdiscussionComponent } from './admnistrator/teamdiscussion/newteamdiscussion/newteamdiscussion.component';
+import { ReportsModule } from './reports/reports.module';
 
 @NgModule({
   declarations: [

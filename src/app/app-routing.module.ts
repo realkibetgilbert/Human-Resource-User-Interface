@@ -17,9 +17,7 @@ import { DocumentworkflowmanagementComponent } from './administrator/documentwor
 import { DocumentworkflowreviewComponent } from './administrator/documentworkflowreview/documentworkflowreview.component';
 import { EmployeeManagementNewComponent } from './administrator/employee-management-new/employee-management-new.component';
 import { EmployeeeducationComponent } from './administrator/employeeeducation/employeeeducation.component';
-
 import { EmployeeemploymenttermsComponent } from './administrator/employeeemploymentterms/employeeemploymentterms.component';
-
 import { EmployeeplacementComponent } from './administrator/employeeplacement/employeeplacement.component';
 import { EmployeeexperienceComponent } from './administrator/employeeexperience/employeeexperience.component';
 import { NewEmployeeExperienceComponent } from './administrator/employeeexperience/new-employee-experience/new-employee-experience.component';
@@ -48,7 +46,6 @@ import { NewethnicityComponent } from './administrator/employerethnicity/newethn
 import { EmployerfilestorageComponent } from './administrator/employerfilestorage/employerfilestorage.component';
 import { EmployerinformationComponent } from './administrator/employerinformation/employerinformation.component';
 import { DisplayComponent } from './administrator/employerjobposition/display/display.component';
-
 import { EmployerjobpositionComponent } from './administrator/employerjobposition/employerjobposition.component';
 import { EmployerlevelComponent } from './administrator/employerlevel/employerlevel.component';
 import { NewlevelComponent } from './administrator/employerlevel/newlevel/newlevel.component';
@@ -105,7 +102,6 @@ import { EmployeeComponent } from './employee/employee.component';
 import { LeaveapplicationComponent } from './employee/leaveapplication/leaveapplication.component';
 import { LeaveplannerComponent } from './employee/leaveplanner/leaveplanner.component';
 import { EmployeeforgotpasswordComponent } from './employeeforgotpassword/employeeforgotpassword.component';
-
 import { LoginComponent } from './login/login.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
@@ -118,10 +114,15 @@ import { EmployeePlacementNewComponent } from './administrator/employeeplacement
 import { EmployeeEmployementTermsNewComponent } from './administrator/employeeemploymentterms/employee-employement-terms-new/employee-employement-terms-new.component';
 import { EmployeeWebAccountNewComponent } from './administrator/employeewebaccount/employee-web-account-new/employee-web-account-new.component';
 import { NewEmployerInformationComponent } from './administrator/employerinformation/new-employer-information/new-employer-information.component';
+import { MemberreportComponent } from './reports/memberreport/memberreport.component';
 
 const routes: Routes = [
   //{path:'',redirectTo:'/login',pathMatch:'full'},
   { path: '', redirectTo: '/login', pathMatch: 'full' },
+  {
+    path: 'reports',
+    component: MemberreportComponent,
+  },
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'testimonial', component: TestimonialComponent },
