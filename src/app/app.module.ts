@@ -3,9 +3,7 @@ import { NgModule } from '@angular/core';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { Ng2OrderModule } from 'ng2-order-pipe';
-
 import { ToastrModule } from 'ngx-toastr';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -14,7 +12,6 @@ import { SignupComponent } from './signup/signup.component';
 import { TestimonialComponent } from './testimonial/testimonial.component';
 import { UserguideComponent } from './userguide/userguide.component';
 import { SharedService } from './shared.service';
-
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -31,12 +28,9 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-
 import { HttpClientModule } from '@angular/common/http';
-
 import { EmployeeComponent } from './employee/employee.component';
 import { EmployeeHomeComponent } from './employee/employee-home/employee-home.component';
-
 import { AdministratorComponent } from './administrator/administrator.component';
 import { EmployeeforgotpasswordComponent } from './employeeforgotpassword/employeeforgotpassword.component';
 import { AdministratorforgotpasswordComponent } from './administratorforgotpassword/administratorforgotpassword.component';
@@ -72,10 +66,8 @@ import { EmployeeWebAccountNewComponent } from './administrator/employeewebaccou
 import { EmployeehrroleComponent } from './administrator/employeehrrole/employeehrrole.component';
 import { EmployeeplacementComponent } from './administrator/employeeplacement/employeeplacement.component';
 import { EmployeePlacementNewComponent } from './administrator/employeeplacement/employee-placement-new/employee-placement-new.component';
-
 import { EmployeeemploymenttermsComponent } from './administrator/employeeemploymentterms/employeeemploymentterms.component';
 import { EmployeeEmployementTermsNewComponent } from './administrator/employeeemploymentterms/employee-employement-terms-new/employee-employement-terms-new.component';
-
 import { LeavemanagementComponent } from './administrator/leavemanagement/leavemanagement.component';
 import { LeaveTransactionSummaryComponent } from './administrator/leave-transaction-summary/leave-transaction-summary.component';
 import { LeaveEntitlementSummaryComponent } from './administrator/leave-entitlement-summary/leave-entitlement-summary.component';
@@ -87,7 +79,6 @@ import { LeaveWorkDaysComponent } from './administrator/leave-work-days/leave-wo
 import { LeaveHolidaysComponent } from './administrator/leave-holidays/leave-holidays.component';
 import { TeamdiscussionComponent } from './administrator/teamdiscussion/teamdiscussion.component';
 import { TeamdocumentsharingComponent } from './administrator/teamdocumentsharing/teamdocumentsharing.component';
-
 import { TeamannouncementComponent } from './administrator/teamannouncement/teamannouncement.component';
 import { PayrollsalaryadjustmentComponent } from './administrator/payrollsalaryadjustment/payrollsalaryadjustment.component';
 import { PayrollprocessComponent } from './administrator/payrollprocess/payrollprocess.component';
